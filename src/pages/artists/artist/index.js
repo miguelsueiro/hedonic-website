@@ -13,8 +13,8 @@ const ArtistPage = ({
       <p>{bio}</p>
       <p>{picture}</p>
       
-      {releases.map((release) => (
-        <>
+      {releases.map((release, index) => (
+        <div key={index} style={{border: '1px solid grey'}}>
           <p>{release.title}</p>
           <p>{release.description}</p>
           {release.images.map((image) => (
@@ -22,7 +22,7 @@ const ArtistPage = ({
               {image}
             </p>
           ))}
-        </>
+        </div>
       ))}
     </div>
   );

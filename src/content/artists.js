@@ -1,15 +1,23 @@
-export const artistsData = [
+export const artistsContent = [
   {
     name: 'First artist',
     bio: 'some bio',
     picture: 'pic.png',
     releases: [
       {
-        title: 'some release title',
+        title: 'first release',
         description: 'some description',
         images: [
-          'front.png',
-          'back.png',
+          'red.png',
+          'blue.png',
+        ]
+      },
+      {
+        title: 'second release',
+        description: 'some description',
+        images: [
+          'green.png',
+          'yellow.png',
         ]
       },
     ],
