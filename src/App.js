@@ -11,9 +11,7 @@ import ArtistsPage from "./pages/artists";
 import ArtistPage from "./pages/artists/artist";
 import ReleasesPage from "./pages/releases";
 import ReleasePage from "./pages/releases/release";
-
-const getReleasePath = (title) => title && `/releases/${paramCase(title)}`
-const getArtistPath = (name) => name && `/artists/${paramCase(name)}`
+import { getArtistPath, getReleasePath } from "./utilities";
 
 const getReleasesContent = () => {
   let result = []

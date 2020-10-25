@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { paramCase } from 'change-case';
 import { artistsContent } from '../../content/artists';
-
-const getReleasePath = (title) => title && `/releases/${paramCase(title)}`
+import { getReleasePath } from '../../utilities'
 
 const getReleasesContent = () => {
   let result = []

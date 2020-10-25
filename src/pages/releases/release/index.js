@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { getArtistPath } from '../../../utilities';
 
 const ReleasePage = ({
   author,
@@ -9,7 +11,7 @@ const ReleasePage = ({
     <div>
       <h2>title {title}</h2>
       
-      <p>{author}</p>
+      <Link to={getArtistPath(author)}>{author}</Link>
       
       {images && images.map((image, index) => (
         <div key={index} style={{border: '1px solid grey'}}>
