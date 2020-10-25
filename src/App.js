@@ -1,4 +1,3 @@
-import { paramCase } from "param-case";
 import React from "react";
 import {
   BrowserRouter as Router,

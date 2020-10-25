@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { artistsContent } from '../../content/artists';
 import { getArtistPath } from '../../utilities';
 
-
 const ArtistsPage = () => {
   return (
     <div>
