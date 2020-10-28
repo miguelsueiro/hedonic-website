@@ -6,12 +6,32 @@ const ReleasePage = ({
   author,
   title,
   images,
+  catNumber,
+  credits,
+  description,
+  releaseDate,
+  format,
 }) => {
   return (
     <div>
-      <h2>title {title}</h2>
+      <h1>{title}</h1>
       
       <Link to={getArtistPath(author)}>{author}</Link>
+
+      {catNumber && <p>{catNumber}</p>}
+      {releaseDate && <p>{releaseDate}</p>}
+      {format && <p>{format}</p>}
+
+      {credits && credits.map((creditLine) => (
+        <>
+          {creditLine}
+          <br/>
+        </>
+      ))}
+
+      {description && description.map((descriptionLine) => (
+        <p>{descriptionLine}</p>
+      ))}
       
       {images && images.map((image, index) => (
         <div key={index} style={{border: '1px solid grey'}}>

@@ -64,6 +64,11 @@ const App = () => {
                 author={content.author}
                 title={content.title}
                 images={content.images}
+                catNumber={content.catNumber}
+                credits={content.credits}
+                description={content.description}
+                releaseDate={content.releaseDate}
+                format={content.format}
               />
             </Route>
           ))}
