@@ -46,10 +46,9 @@ const App = () => {
             </li>
           </ul>
         </nav>
-
         <Switch>
-          {artistsContent.map((dataItem) => (
-            <Route path={getArtistPath(dataItem.name)}>
+          {artistsContent.map((dataItem, index) => (
+            <Route path={getArtistPath(dataItem.name)} key={index}>
               <ArtistPage
                 name={dataItem.name}
                 bio={dataItem.bio}
@@ -58,8 +57,8 @@ const App = () => {
               />
             </Route>
           ))}
-          {getReleasesContent().map((content) => (
-            <Route path={getReleasePath(content.title)}>
+          {getReleasesContent().map((content, index) => (
+            <Route path={getReleasePath(content.title)} key={index}>
               <ReleasePage
                 author={content.author}
                 title={content.title}

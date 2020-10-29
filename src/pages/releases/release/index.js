@@ -29,8 +29,8 @@ const ReleasePage = ({
         </>
       ))}
 
-      {description && description.map((descriptionLine) => (
-        <p>{descriptionLine}</p>
+      {description && description.map((descriptionLine, index) => (
+        <p key={index}>{descriptionLine}</p>
       ))}
       
       {images && images.map((image, index) => (

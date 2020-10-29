@@ -9,8 +9,8 @@ const ArtistsPage = () => {
       <h1>Artists</h1>
       <nav>
         <ul>
-          {artistsContent.map((dataItem) => (
-            <li>
+          {artistsContent.map((dataItem, index) => (
+            <li key={index}>
               <Link to={getArtistPath(dataItem.name)}>
                 {dataItem.name}
               </Link>

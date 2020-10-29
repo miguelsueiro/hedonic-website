@@ -1,8 +1,10 @@
 export const artistsContent = [
   {
     name: 'Refectori',
-    bio: 'some bio',
-    picture: 'pic.png',
+    bio: [
+      `Refectori (Xavier Longàs) has performed in different halls and festivals in Barcelona as Bicefal festival, also in the third and fourth WAV Conference that were celebrated in El Pumarejo and in Hangar respectively, likewise took sounds next to techno in Kreuzberg Club organized by Diffuse Reality and with the HEX collective has participated in his second episode in The Loft of Razzmatazz.`,
+    ],
+    picture: 'blume.jpg',
     releases: [
       {
         title: 'Espleni',
@@ -21,8 +23,8 @@ export const artistsContent = [
           'He has performed in different halls and festivals in Barcelona as Bicefal festival, also in the third and fourth WAV Conference that were celebrated in El Pumarejo and in Hangar respectively, likewise took sounds next to techno in Kreuzberg Club organized by Diffuse Reality and with the HEX collective has participated in his second episode in The Loft of Razzmatazz.',
         ],
         images: [
-          'red.png',
-          'blue.png',
+          'back-vinyl.gif',
+          'back.gif',
         ]
       },
       {
@@ -50,8 +52,10 @@ export const artistsContent = [
   
   {
     name: 'Second artist',
-    bio: 'some other bio',
-    picture: 'pic22.png',
+    bio: [
+      'some other bio'
+    ],
+    picture: 'orphan-swords.jpg',
     releases: [
       {
         title: 'another release title',
