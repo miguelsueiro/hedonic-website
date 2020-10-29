@@ -49,24 +49,4 @@ export const artistsContent = [
       },
     ],
   },
-  
-  {
-    name: 'Second artist',
-    bio: [
-      'some other bio'
-    ],
-    picture: 'orphan-swords.jpg',
-    releases: [
-      {
-        title: 'another release title',
-        description: [
-          'some description',
-        ],
-        images: [
-          'front.png',
-          'back.png',
-        ]
-      },
-    ],
-  },
 ]
