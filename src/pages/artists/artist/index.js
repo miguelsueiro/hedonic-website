@@ -8,7 +8,6 @@ const ArtistPage = ({
   picture,
   releases,
 }) => {
-  const pictureSrc = require(`../../../content/images/artists/${picture}`).default
   
   return (
     <div>
@@ -18,7 +17,6 @@ const ArtistPage = ({
         <p key={index}>{bioLine}</p>  
       ))}
 
-      <img src={pictureSrc} alt={name}/>
        
       {releases.map((release, index) => (
         <div key={index} style={{border: '1px solid grey'}}>
