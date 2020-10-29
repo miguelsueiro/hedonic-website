@@ -33,11 +33,15 @@ const ReleasePage = ({
         <p key={index}>{descriptionLine}</p>
       ))}
       
-      {images && images.map((image, index) => (
-        <div key={index} style={{border: '1px solid grey'}}>
-          {image}
-        </div>
-      ))}
+      {images && images.map((image, index) => {
+        const imageSrc = require(`../../../content/images/releases/${image}`).default
+
+        return(
+          <div key={index} style={{border: '1px solid grey'}}>
+            <img src={imageSrc} alt={title}/>
+          </div>
+        )
+      })}
     </div>
   );
 }
