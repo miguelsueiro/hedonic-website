@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 import { artistsContent } from "./content/artists";
 import ArtistsPage from "./pages/artists";
@@ -33,16 +33,16 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink className="menuNav" activeClassName="activeMenuNav" exact to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/artists">Artists</Link>
+              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/artists">Artists</NavLink>
             </li>
             <li>
-              <Link to="/releases">Releases</Link>
+              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/releases">Releases</NavLink>
             </li>
           </ul>
         </nav>
