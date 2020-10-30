@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 import { artistsContent } from "./content/artists";
 import ArtistsPage from "./pages/artists";
@@ -11,6 +11,7 @@ import ArtistPage from "./pages/artists/artist";
 import ReleasesPage from "./pages/releases";
 import ReleasePage from "./pages/releases/release";
 import { getArtistPath, getReleasePath } from "./utilities";
+import BaseStyles from './ui-system/components/base-styles'
 
 const getReleasesContent = () => {
   let result = []
@@ -29,6 +30,7 @@ const getReleasesContent = () => {
 const App = () => {
   return (
     <Router>
+      <BaseStyles />
       <div>
         <nav>
           <ul>
