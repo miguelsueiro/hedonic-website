@@ -20,14 +20,13 @@ const getReleasesContent = () => {
 const ReleasesPage = () => {
   return (
     <div>
+      <h1>Releases</h1>
       <nav>
         <ul>
           {getReleasesContent().map((content, index) => (
             <li key={index}>
               <Link to={getReleasePath(content.title)}>
-                {content.title}
-                <br />
-                {content.author}
+                {content.title} — {content.author}
               </Link>
             </li>
           ))}
