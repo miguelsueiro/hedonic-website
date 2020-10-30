@@ -1,7 +1,10 @@
+import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
 import { artistsContent } from '../../content/artists';
+import Shape from '../../ui-system/components/shape';
 import { getReleasePath } from '../../utilities'
+import shape from './sh.png'
 
 const getReleasesContent = () => {
   let result = []
@@ -17,9 +20,21 @@ const getReleasesContent = () => {
   return result
 }
 
+const PageWrapper = styled.div`
+  position: relative;
+`
+
+const ShapeContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0 auto;
+`
+
 const ReleasesPage = () => {
   return (
-    <div>
+    <PageWrapper>
       <h1>Releases</h1>
       <nav>
         <ul>
@@ -32,7 +47,10 @@ const ReleasesPage = () => {
           ))}
         </ul>
       </nav>
-    </div>
+      <ShapeContainer>
+        <Shape imageSrc={shape} size="calc(30vw + 20rem)" />
+      </ShapeContainer>
+    </PageWrapper>
   );
 }
 

@@ -7,7 +7,7 @@ const styles = css`
     --bodyBg: white;
     --bodyContent: #222;
     
-    --releasesBg: #111;
+    --releasesBg: #1B262F;
     --releasesContent: white;
   }
 
@@ -15,6 +15,10 @@ const styles = css`
     background-color: var(--bodyBg);
     color: var(--bodyContent);
     transition: background 0.3s;
+  }
+
+  a {
+    color: inherit;
   }
 `
 
