@@ -5,13 +5,20 @@ import Text from '../../../ui-system/components/text';
 import { getReleasePath } from '../../../utilities';
 
 const Wrapper = styled.div`
-  display: grid;
   grid-template-columns: 2fr 1fr;
   gap: var(--space-m);
+
+  @media (min-width: 1001px) {
+    display: grid;
+  }
 `
 
 const ImagesSection = styled.div`
   margin-left: calc(-1 * var(--pagePadding));
+
+  @media (max-width: 1000px) {
+    margin-right: calc(-1 * var(--pagePadding));
+  }
 `
 
 const InfoSection = styled.div`
@@ -31,13 +38,13 @@ const ReleasesSection = styled.div`
 
 const LinksSection = styled.div`
   display: flex;
-  gap: var(--space-s);
   margin-bottom: var(--space-m);
 `
 
 const ArtistLink = styled.a`
   text-decoration: underline;
   text-underline-position: under;
+  margin-right: var(--space-s);
 `
 
 const ArtistPage = ({
