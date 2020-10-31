@@ -9,8 +9,16 @@ import shape from '../../shapes/two.png'
 
 const ArtistsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(1, 1fr);
   gap: 2px;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1001px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 const ArtistLink = styled(Link)`
