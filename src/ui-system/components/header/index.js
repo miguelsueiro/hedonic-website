@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom'
 import Logo from '../../components/logo'
 
 const NavItem = styled.li`
-  font-size: var(--text-l);
-
   a {
     text-decoration: none;
     transition: 0.3s;
@@ -39,32 +37,43 @@ const NavItem = styled.li`
   }
 `
 
+const LogoSection = styled.div`
+  width: 200px;
+
+  @media (min-width: 1000px) {    
+    width: 250px;
+  }
+`
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  font-size: var(--text-l);
 `
 
 const Header = () => {
   return (
     <Wrapper>
-
-    <nav>
-      <ul>
-        <NavItem>
-          <NavLink activeClassName="activeMenuNav" exact to="/">home</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink activeClassName="activeMenuNav" to="/about">about</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
-        </NavItem>
-      </ul>
-    </nav>
-    <Logo color="var(--c-red)" />
+      <nav>
+        <ul>
+          <NavItem>
+            <NavLink activeClassName="activeMenuNav" exact to="/">home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink activeClassName="activeMenuNav" to="/about">about</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
+          </NavItem>
+        </ul>
+      </nav>
+      <LogoSection>
+        <Logo color="var(--c-red)" width="100%"/>
+      </LogoSection>
     </Wrapper>
   )
 }
