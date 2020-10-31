@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
+import Player from '../../../ui-system/components/player';
 import { getArtistPath } from '../../../utilities';
 
 const Wrapper = styled.div`
@@ -32,6 +33,7 @@ const ReleasePage = ({
   description,
   releaseDate,
   format,
+  albumId,
 }) => {
   return (
     <>
@@ -57,6 +59,12 @@ const ReleasePage = ({
         </DetailsSection>
 
         <div>
+          {albumId && (
+            <div className="mb-m">
+              <Player album={albumId}/>
+            </div>
+          )}
+
           {description && description.map((descriptionLine, index) => (
             <p key={index}>{descriptionLine}</p>
           ))}

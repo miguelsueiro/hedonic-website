@@ -20,7 +20,10 @@ const styles = css`
 
     --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
 
+    --space-s: 0.5rem;
     --space-m: 1.5rem;
+    --space-l: 3rem;
+    --space-xl: 6rem;
     
     --pagePadding: var(--space-m);
   }
@@ -40,6 +43,7 @@ const styles = css`
 
   a {
     color: inherit;
+    text-decoration: none;
   }
 
   h1, h2, h3, h4, h5, h6 {

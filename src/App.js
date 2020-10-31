@@ -55,6 +55,7 @@ const App = () => {
                 description={content.description}
                 releaseDate={content.releaseDate}
                 format={content.format}
+                albumId={content.albumId}
               />
             </Route>
           ))}

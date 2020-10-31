@@ -2,7 +2,7 @@ import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import React from 'react'
 
-const TextWrapper = styled.li`
+const TextWrapper = styled.div`
   font-size: ${p => `var(--text-${p.size})`};
   
   ${p => p.hasCaps && css`
