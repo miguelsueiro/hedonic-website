@@ -21,6 +21,23 @@ const InfoSection = styled.div`
 const NameSection = styled.div`
   text-align: center;
   margin-bottom: var(--space-xl);
+  `
+
+const ReleasesSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+  `
+
+const LinksSection = styled.div`
+  display: flex;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+`
+
+const ArtistLink = styled.a`
+  text-decoration: underline;
+  text-underline-position: under;
 `
 
 const ArtistPage = ({
@@ -28,6 +45,7 @@ const ArtistPage = ({
   bio,
   picture,
   releases,
+  links,
 }) => {
   const pictureSrc = require(`../../../content/images/artists/${picture}`).default
   
@@ -46,17 +64,32 @@ const ArtistPage = ({
             <p key={index}>{bioLine}</p>  
           ))}
           
-          {releases.map((release, index) => (
-            <div key={index} style={{border: '1px solid grey'}}>
-              <Link to={getReleasePath(release.title)}>{release.title}</Link>
-              <p>{release.title}</p>
-              {release.images.map((image, index) => (
-                <p key={index}>
-                  {image}
-                </p>
-              ))}
-            </div>
-          ))}
+          <LinksSection>
+            {links && Object.entries(links).map(([key, value], index) => (
+              <ArtistLink href={value}>{key}</ArtistLink>
+            ))}
+          </LinksSection>
+
+          {releases.length > 0 && (
+            <div className="mb-s">— Releases</div>
+          )}
+
+          <ReleasesSection>
+            {releases.map((release, index) => {
+              const coverImageSrc = require(`../../../content/images/releases/${release.coverImage}`).default
+
+              return (
+                <Link
+                  to={getReleasePath(release.title)}
+                  key={index}
+                >
+                  {release.coverImage && (
+                    <img src={coverImageSrc} alt={release.title}/>
+                  )}
+                </Link>
+              )
+            })}
+          </ReleasesSection>
         </InfoSection>
       </Wrapper>
     </div>

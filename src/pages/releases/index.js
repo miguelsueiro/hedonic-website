@@ -27,7 +27,7 @@ const PageWrapper = styled.div`
 
 const ShapeContainer = styled.div`
   position: absolute;
-  top: 0;
+  top: calc(-1 * var(--space-xl));
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;
@@ -46,12 +46,17 @@ const LinkWrapper = styled.div`
       transition: 0s;
       color: var(--c-red);
     }
+
+    @media(max-width: 1000px) {
+      flex-direction: column;
+      margin-bottom: var(--space-m);
+    }
   }
 `
 
 const ReleasesPage = () => {
   return (
-    <PageWrapper>
+    <PageWrapper className="mt-xl">
       <nav>
         <ul>
           {getReleasesContent().map((release, index) => (

@@ -5,7 +5,7 @@ const Shape = ({ imageSrc, size }) => (
     <filter id="noise">
       <feTurbulence
         type="turbulence"
-        baseFrequency="0.03"
+        baseFrequency="0.001"
         id="turbulence"
         numOctaves={1}
         result="turbulence"

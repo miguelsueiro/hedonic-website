@@ -41,6 +41,7 @@ const App = () => {
                 bio={dataItem.bio}
                 picture={dataItem.picture}
                 releases={dataItem.releases}
+                links={dataItem.links}
               />
             </Route>
           ))}

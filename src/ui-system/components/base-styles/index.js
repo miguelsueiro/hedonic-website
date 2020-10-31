@@ -10,8 +10,9 @@ const styles = css`
     --releasesBg: #1B262F;
     --releasesContent: white;
 
-    --text-l: 1.8rem;
-    --text-xl: 4rem;
+    --text-l: clamp(1.5rem, 2.1vw, 1.8rem);
+    --text-xl: clamp(2rem, 4.5vw, 4rem);
+    --text-2xl: clamp(3rem, 6vw, 5rem);
 
     --c-red: #E3352E;
 
@@ -48,6 +49,7 @@ const styles = css`
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
+    margin: unset;
   }
 
   h1 {
