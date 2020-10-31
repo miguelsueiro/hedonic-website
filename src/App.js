@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink,
 } from "react-router-dom";
 import { artistsContent } from "./content/artists";
 import ArtistsPage from "./pages/artists";
@@ -12,6 +11,7 @@ import ReleasesPage from "./pages/releases";
 import ReleasePage from "./pages/releases/release";
 import { getArtistPath, getReleasePath } from "./utilities";
 import BaseStyles from './ui-system/components/base-styles'
+import Header from "./ui-system/components/header";
 
 const getReleasesContent = () => {
   let result = []
@@ -32,22 +32,7 @@ const App = () => {
     <Router>
       <BaseStyles />
       <div>
-        <nav>
-          <ul>
-            <li>
-              <NavLink className="menuNav" activeClassName="activeMenuNav" exact to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/artists">Artists</NavLink>
-            </li>
-            <li>
-              <NavLink className="menuNav" activeClassName="activeMenuNav" to="/releases">Releases</NavLink>
-            </li>
-          </ul>
-        </nav>
+        <Header />
         <Switch>
           {artistsContent.map((dataItem, index) => (
             <Route path={getArtistPath(dataItem.name)} key={index}>
@@ -92,11 +77,11 @@ const App = () => {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return <h1>Home</h1>;
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <h1>About</h1>;
 }
 
 export default App;

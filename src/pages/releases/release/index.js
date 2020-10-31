@@ -1,6 +1,27 @@
+import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
 import { getArtistPath } from '../../../utilities';
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 2fr auto 1fr;
+`
+
+const ImagesSection = styled.div`
+  margin-left: calc(-1 * var(--pagePadding));
+`
+
+const DetailsSection = styled.div`
+  writing-mode: vertical-rl;
+  padding: 0 var(--space-m);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+`
+
+const CreditsSection = styled.div`
+  opacity: 0.5;
+`
 
 const ReleasePage = ({
   author,
@@ -13,36 +34,44 @@ const ReleasePage = ({
   format,
 }) => {
   return (
-    <div>
+    <>
       <h1>{title}</h1>
-      
       <Link to={getArtistPath(author)}>{author}</Link>
+      <Wrapper>
+        <ImagesSection>
+          {images && images.map((image, index) => {
+            const imageSrc = require(`../../../content/images/releases/${image}`).default
 
-      {catNumber && <p>{catNumber}</p>}
-      {releaseDate && <p>{releaseDate}</p>}
-      {format && <p>{format}</p>}
+            return(
+              <div key={index}>
+                <img src={imageSrc} alt={title}/>
+              </div>
+            )
+          })}
+        </ImagesSection>
 
-      {credits && credits.map((creditLine) => (
-        <>
-          {creditLine}
-          <br/>
-        </>
-      ))}
+        <DetailsSection>
+          {catNumber && <span>{catNumber} - </span>}
+          {releaseDate && <span>{releaseDate} - </span>}
+          {format && <span>{format}</span>}
+        </DetailsSection>
 
-      {description && description.map((descriptionLine, index) => (
-        <p key={index}>{descriptionLine}</p>
-      ))}
-      
-      {images && images.map((image, index) => {
-        const imageSrc = require(`../../../content/images/releases/${image}`).default
+        <div>
+          {description && description.map((descriptionLine, index) => (
+            <p key={index}>{descriptionLine}</p>
+          ))}
 
-        return(
-          <div key={index} style={{border: '1px solid grey'}}>
-            <img src={imageSrc} alt={title}/>
-          </div>
-        )
-      })}
-    </div>
+          {credits && credits.map((creditLine) => (
+            <CreditsSection>
+              {creditLine}
+              <br/>
+            </CreditsSection>
+          ))}
+
+        </div>
+        
+      </Wrapper>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { artistsContent } from '../../content/artists';
 import Shape from '../../ui-system/components/shape';
+import Text from '../../ui-system/components/text';
 import { getReleasePath } from '../../utilities'
 import shape from './sh.png'
 
@@ -30,20 +31,36 @@ const ShapeContainer = styled.div`
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;
+  pointer-events: none;
+  z-index: -1;
+`
+
+const LinkWrapper = styled.div`
+  a {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    transition: 0.6s;
+    
+    &:hover {
+      transition: 0s;
+      color: var(--c-red);
+    }
+  }
 `
 
 const ReleasesPage = () => {
   return (
     <PageWrapper>
-      <h1>Releases</h1>
       <nav>
         <ul>
-          {getReleasesContent().map((content, index) => (
-            <li key={index}>
-              <Link to={getReleasePath(content.title)}>
-                {content.title} — {content.author}
+          {getReleasesContent().map((release, index) => (
+            <LinkWrapper key={index}>
+              <Link to={getReleasePath(release.title)}>
+                <Text as="span" hasCaps>{release.author}</Text>
+                <Text as="span" size="xl">{release.title}</Text>
               </Link>
-            </li>
+            </LinkWrapper>
           ))}
         </ul>
       </nav>

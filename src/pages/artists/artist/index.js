@@ -12,7 +12,7 @@ const ArtistPage = ({
   
   return (
     <div>
-      <h2>{name}</h2>
+      <h1>{name}</h1>
       
       {bio.map((bioLine, index) => (
         <p key={index}>{bioLine}</p>  

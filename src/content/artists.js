@@ -27,26 +27,6 @@ export const artistsContent = [
           'back.gif',
         ]
       },
-      {
-        title: 'first release',
-        description: [
-          'some description',
-        ],
-        images: [
-          'back-vinyl.gif',
-          'back.gif',
-        ]
-      },
-      {
-        title: 'second release',
-        description: [
-          'some description',
-        ],
-        images: [
-          'back-vinyl.gif',
-          'back.gif',
-        ]
-      },
     ],
   },
   // --------------------------------------------------------
@@ -58,7 +38,7 @@ export const artistsContent = [
     picture: 'orphan-swords.jpg',
     releases: [
       {
-        title: 'Espleni',
+        title: 'Another',
         catNumber: 'HEDREV-00004',
         releaseDate: '21 June 2019',
         format: 'Vinyl / Digital',
@@ -78,20 +58,31 @@ export const artistsContent = [
           'back.gif',
         ]
       },
+    ],
+  },
+  // --------------------------------------------------------
+  {
+    name: 'Huma',
+    bio: [
+      'Refectori (Xavier Longàs) has performed in different halls and festivals in Barcelona as Bicefal festival, also in the third and fourth WAV Conference that were celebrated in El Pumarejo and in Hangar respectively, likewise took sounds next to techno in Kreuzberg Club organized by Diffuse Reality and with the HEX collective has participated in his second episode in The Loft of Razzmatazz.',
+    ],
+    picture: 'orphan-swords.jpg',
+    releases: [
       {
-        title: 'first release',
-        description: [
-          'some description',
+        title: 'Eva',
+        catNumber: 'HEDREV-00004',
+        releaseDate: '21 June 2019',
+        format: 'Vinyl / Digital',
+        credits: [
+          'Produced by Xavier Longàs',
+          'Mastered by Pedro Pina',
+          'Art direction & Design Miguel Sueiro',
+          'Photograhpy by Eva P aià',
         ],
-        images: [
-          'back-vinyl.gif',
-          'back.gif',
-        ]
-      },
-      {
-        title: 'second release',
         description: [
-          'some description',
+          'From the physical transformation of organic elements that melt generating new textures, Espleni is created. Fragmented into nine pieces, it starts with an inmersive melody starting a route without return where you can explore frozen territories of heavy structures. This reflects the union between body and raw material, an interest that was already glimpsed in its first release with Bestiarie (2015). The distortion of organic sounds arrives to wide landscapes of noise, sometimes moderated and in others uncontrolled. Noises that are juxtaposed in a constant dialogue until its definitive bifurcation.',
+          'This project starts from the recording of everyday sounds that surround the author, using a Zoom H5 recorder, with which he later experiments, manipulating and gathering them until creating a musically harmonic composition.',
+          'He has performed in different halls and festivals in Barcelona as Bicefal festival, also in the third and fourth WAV Conference that were celebrated in El Pumarejo and in Hangar respectively, likewise took sounds next to techno in Kreuzberg Club organized by Diffuse Reality and with the HEX collective has participated in his second episode in The Loft of Razzmatazz.',
         ],
         images: [
           'back-vinyl.gif',

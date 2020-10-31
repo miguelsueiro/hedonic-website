@@ -1,5 +1,4 @@
 body {
-  margin: 2rem;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,15 +16,5 @@ li {
 
 img {
   max-width: 100%;
-}
-
-.menuNav {
-  transition: 0.3s;
   display: block;
-  transform: translateX(0px);
-}
-
-.activeMenuNav {
-  transform: translateX(1rem);
-  color: red;
 }
