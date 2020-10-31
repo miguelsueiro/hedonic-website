@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "QuioscoOne", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -117,8 +117,44 @@ img {
   padding-bottom: var(--space-xl);
 }
 .pl-xl {
-  padding-xleft: var(--space-xl);
+  padding-left: var(--space-xl);
 }
 .pr-xl {
   padding-right: var(--space-xl);
+}
+
+@font-face {
+  font-family: "QuioscoOne";
+  src: url("./fonts/QuioscoOne-Bold.woff2") format("woff2"),
+    url("./fonts/QuioscoOne-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QuioscoOne";
+  src: url("./fonts/QuioscoOne-Roman.woff2") format("woff2"),
+    url("./fonts/QuioscoOne-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QuioscoOne";
+  src: url("./fonts/QuioscoOne-Italic.woff2") format("woff2"),
+    url("./fonts/QuioscoOne-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QuioscoOne";
+  src: url("./fonts/QuioscoOne-BoldItalic.woff2") format("woff2"),
+    url("./fonts/QuioscoOne-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }

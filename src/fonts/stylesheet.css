@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'QuioscoOne';
+    src: url('QuioscoOne-Bold.woff2') format('woff2'),
+        url('QuioscoOne-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'QuioscoOne';
+    src: url('QuioscoOne-Roman.woff2') format('woff2'),
+        url('QuioscoOne-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'QuioscoOne';
+    src: url('QuioscoOne-Italic.woff2') format('woff2'),
+        url('QuioscoOne-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'QuioscoOne';
+    src: url('QuioscoOne-BoldItalic.woff2') format('woff2'),
+        url('QuioscoOne-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
