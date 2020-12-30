@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../components/logo'
 
 const NavItem = styled.li`
@@ -37,7 +37,7 @@ const NavItem = styled.li`
   }
 `
 
-const LogoSection = styled.div`
+const LogoSection = styled(Link)`
   width: 200px;
 
   @media (min-width: 1000px) {    
@@ -64,9 +64,6 @@ export const Menu = ({ menuTop }) => (
   <MenuWrapper menuTop={menuTop}>
     <ul>
       <NavItem>
-        <NavLink activeClassName="activeMenuNav" exact to="/">home</NavLink>
-      </NavItem>
-      <NavItem>
         <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
       </NavItem>
       <NavItem>
@@ -82,7 +79,7 @@ export const Menu = ({ menuTop }) => (
 const Header = () => {
   return (
     <Wrapper>
-      <LogoSection>
+      <LogoSection exact to="/">
         <Logo color="var(--c-red)" width="100%"/>
       </LogoSection>
     </Wrapper>
