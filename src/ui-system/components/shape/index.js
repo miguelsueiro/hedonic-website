@@ -14,7 +14,7 @@ const Shape = ({ imageSrc, size }) => (
         <animate
           id="noiseAnimate"
           attributeName="baseFrequency"
-          values="0.03; 0.001; 0.03"
+          // values="0.03; 0.001; 0.03"
           dur="30s"
           repeatCount="indefinite"
         />
