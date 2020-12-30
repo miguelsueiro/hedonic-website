@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Menu } from '../../../ui-system/components/header';
 import Text from '../../../ui-system/components/text';
 import { getReleasePath } from '../../../utilities';
 
@@ -57,49 +58,52 @@ const ArtistPage = ({
   const pictureSrc = require(`../../../content/images/artists/${picture}`).default
   
   return (
-    <div className="mt-l">
-      <NameSection>
-        <Text hasCaps size="l">{name}</Text>
-      </NameSection>
-      <Wrapper>
-        <ImagesSection>
-          <img src={pictureSrc} alt={name}/>
-        </ImagesSection>
+    <>
+      <Menu />
+      <div className="mt-l">
+        <NameSection>
+          <Text hasCaps size="l">{name}</Text>
+        </NameSection>
+        <Wrapper>
+          <ImagesSection>
+            <img src={pictureSrc} alt={name}/>
+          </ImagesSection>
 
-        <InfoSection>
-          {bio.map((bioLine, index) => (
-            <p key={index}>{bioLine}</p>  
-          ))}
-          
-          <LinksSection>
-            {links && Object.entries(links).map(([key, value], index) => (
-              <ArtistLink href={value}>{key}</ArtistLink>
+          <InfoSection>
+            {bio.map((bioLine, index) => (
+              <p key={index}>{bioLine}</p>  
             ))}
-          </LinksSection>
+            
+            <LinksSection>
+              {links && Object.entries(links).map(([key, value], index) => (
+                <ArtistLink href={value}>{key}</ArtistLink>
+              ))}
+            </LinksSection>
 
-          {releases.length > 0 && (
-            <div className="mb-s">— Releases</div>
-          )}
+            {releases.length > 0 && (
+              <div className="mb-s">— Releases</div>
+            )}
 
-          <ReleasesSection>
-            {releases.map((release, index) => {
-              const coverImageSrc = require(`../../../content/images/releases/${release.coverImage}`).default
+            <ReleasesSection>
+              {releases.map((release, index) => {
+                const coverImageSrc = require(`../../../content/images/releases/${release.coverImage}`).default
 
-              return (
-                <Link
-                  to={getReleasePath(release.title)}
-                  key={index}
-                >
-                  {release.coverImage && (
-                    <img src={coverImageSrc} alt={release.title}/>
-                  )}
-                </Link>
-              )
-            })}
-          </ReleasesSection>
-        </InfoSection>
-      </Wrapper>
-    </div>
+                return (
+                  <Link
+                    to={getReleasePath(release.title)}
+                    key={index}
+                  >
+                    {release.coverImage && (
+                      <img src={coverImageSrc} alt={release.title}/>
+                    )}
+                  </Link>
+                )
+              })}
+            </ReleasesSection>
+          </InfoSection>
+        </Wrapper>
+      </div>
+    </>
   );
 }
 

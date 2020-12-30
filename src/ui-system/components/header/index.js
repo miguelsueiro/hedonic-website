@@ -45,32 +45,43 @@ const LogoSection = styled.div`
   }
 `
 
+const MenuWrapper = styled.div`
+  font-size: var(--text-l);
+  ${p => p.menuTop && `margin-top: ${p.menuTop}`};
+`
+
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
-  font-size: var(--text-l);
+  position: absolute;
+  top: var(--pagePadding);
+  right: var(--pagePadding);
+  z-index: 100;
 `
+
+export const Menu = ({ menuTop }) => (
+  <MenuWrapper menuTop={menuTop}>
+    <ul>
+      <NavItem>
+        <NavLink activeClassName="activeMenuNav" exact to="/">home</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
+      </NavItem>
+    </ul>
+  </MenuWrapper>
+)
 
 const Header = () => {
   return (
     <Wrapper>
-      <nav>
-        <ul>
-          <NavItem>
-            <NavLink activeClassName="activeMenuNav" exact to="/">home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink activeClassName="activeMenuNav" to="/about">about</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
-          </NavItem>
-        </ul>
-      </nav>
       <LogoSection>
         <Logo color="var(--c-red)" width="100%"/>
       </LogoSection>

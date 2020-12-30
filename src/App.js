@@ -12,6 +12,7 @@ import ReleasePage from "./pages/releases/release";
 import { getArtistPath, getReleasePath } from "./utilities";
 import BaseStyles from './ui-system/components/base-styles'
 import Header from "./ui-system/components/header";
+import HomePage from "./pages/home";
 
 const getReleasesContent = () => {
   let result = []
@@ -32,7 +33,7 @@ const App = () => {
     <Router>
       <BaseStyles />
       <div>
-        <Header />
+        <Header menuTop='70vh'/>
         <Switch>
           {artistsContent.map((dataItem, index) => (
             <Route path={getArtistPath(dataItem.name)} key={index}>
@@ -63,14 +64,14 @@ const App = () => {
           <Route path="/releases">
             <ReleasesPage />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/info">
+            <Info />
           </Route>
           <Route path="/artists">
             <ArtistsPage />
           </Route>
           <Route path="/">
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </div>
@@ -78,12 +79,8 @@ const App = () => {
   );
 }
 
-function Home() {
-  return <h1>Home</h1>;
-}
-
-function About() {
-  return <h1>About</h1>;
+function Info() {
+  return <h1>Info page</h1>;
 }
 
 export default App;

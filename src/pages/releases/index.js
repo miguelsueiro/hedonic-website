@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
 import { artistsContent } from '../../content/artists';
+import { Menu } from '../../ui-system/components/header';
 import Shape from '../../ui-system/components/shape';
 import Text from '../../ui-system/components/text';
 import { getReleasePath } from '../../utilities'
@@ -56,23 +57,26 @@ const LinkWrapper = styled.div`
 
 const ReleasesPage = () => {
   return (
-    <PageWrapper className="mt-xl">
-      <nav>
-        <ul>
-          {getReleasesContent().map((release, index) => (
-            <LinkWrapper key={index}>
-              <Link to={getReleasePath(release.title)}>
-                <Text as="span" hasCaps>{release.author}</Text>
-                <Text as="span" size="xl">{release.title}</Text>
-              </Link>
-            </LinkWrapper>
-          ))}
-        </ul>
-      </nav>
-      <ShapeContainer>
-        <Shape imageSrc={shape} size="calc(30vw + 20rem)" />
-      </ShapeContainer>
-    </PageWrapper>
+    <>
+      <Menu />
+      <PageWrapper className="mt-xl">
+        <nav>
+          <ul>
+            {getReleasesContent().map((release, index) => (
+              <LinkWrapper key={index}>
+                <Link to={getReleasePath(release.title)}>
+                  <Text as="span" hasCaps>{release.author}</Text>
+                  <Text as="span" size="xl">{release.title}</Text>
+                </Link>
+              </LinkWrapper>
+            ))}
+          </ul>
+        </nav>
+        <ShapeContainer>
+          <Shape imageSrc={shape} size="calc(30vw + 20rem)" />
+        </ShapeContainer>
+      </PageWrapper>
+    </>
   );
 }
 

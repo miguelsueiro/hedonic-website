@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
+import { Menu } from '../../../ui-system/components/header';
 import Player from '../../../ui-system/components/player';
 import Text from '../../../ui-system/components/text';
 import { getArtistPath } from '../../../utilities';
@@ -71,6 +72,7 @@ const ReleasePage = ({
 }) => {
   return (
     <>
+      <Menu />
       <div className="mt-l mb-l">
         <Text hasCaps className="mb-s">
           <ArtistLink to={getArtistPath(author)}>{author}</ArtistLink>

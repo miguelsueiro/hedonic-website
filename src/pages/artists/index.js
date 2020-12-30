@@ -6,6 +6,7 @@ import { getArtistPath } from '../../utilities';
 import Text from '../../ui-system/components/text'
 import Shape from '../../ui-system/components/shape';
 import shape from '../../shapes/two.png'
+import { Menu } from '../../ui-system/components/header';
 
 const ArtistsGrid = styled.div`
   display: grid;
@@ -46,6 +47,7 @@ const ShapeContainer = styled.div`
 const ArtistsPage = () => {
   return (
     <>
+      <Menu />
       <ShapeContainer>
         <Shape imageSrc={shape} size="calc(30vw + 20rem)" />
       </ShapeContainer>

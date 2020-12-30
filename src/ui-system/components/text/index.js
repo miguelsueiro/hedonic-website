@@ -4,6 +4,9 @@ import React from 'react'
 
 const TextWrapper = styled.div`
   font-size: ${p => `var(--text-${p.size})`};
+  color: ${p => `var(--c-${p.color})`};
+  text-align: ${p => p.align};
+  display: ${p => p.display};
   
   ${p => p.hasCaps && css`
     letter-spacing: 0.7em;
@@ -11,9 +14,9 @@ const TextWrapper = styled.div`
   `};
 `
 
-const Text = ({children, size, hasCaps, ...props}) => {
+const Text = ({children, size, hasCaps, color, align, display, ...props}) => {
   return (
-    <TextWrapper size={size} hasCaps={hasCaps} {...props}>
+    <TextWrapper size={size} hasCaps={hasCaps} color={color} align={align} display={display} {...props}>
       {children}
     </TextWrapper>
   )

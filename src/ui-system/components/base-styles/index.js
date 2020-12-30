@@ -15,6 +15,7 @@ const styles = css`
     --text-2xl: clamp(3rem, 6vw, 5rem);
 
     --c-red: #E3352E;
+    --c-border: hsla(0,0%,0%,0.1);
 
     --lineHeightFixedAmount: 0.5rem;
     --lineHeightRelativeAmount: 0.9em;
@@ -25,6 +26,7 @@ const styles = css`
     --space-m: 1.5rem;
     --space-l: 3rem;
     --space-xl: 6rem;
+    --space-2xl: 8rem;
     
     --pagePadding: var(--space-m);
   }
