@@ -76,7 +76,7 @@ const ArtistPage = ({
             
             <LinksSection>
               {links && Object.entries(links).map(([key, value], index) => (
-                <ArtistLink href={value}>{key}</ArtistLink>
+                <ArtistLink href={value} key={index}>{key}</ArtistLink>
               ))}
             </LinksSection>
 

@@ -79,7 +79,7 @@ export const Menu = ({ menuTop }) => (
 const Header = () => {
   return (
     <Wrapper>
-      <LogoSection exact to="/">
+      <LogoSection to="/">
         <Logo color="var(--c-red)" width="100%"/>
       </LogoSection>
     </Wrapper>
