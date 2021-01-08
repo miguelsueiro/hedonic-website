@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
-import { artistsContent } from '../../content/artists';
-import { getArtistPath } from '../../utilities';
 import Text from '../../ui-system/components/text'
 import Shape from '../../ui-system/components/shape';
 import { Menu } from '../../ui-system/components/header';
