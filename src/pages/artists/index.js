@@ -36,7 +36,7 @@ const NameSection = styled.div`
 `
 const ShapeContainer = styled.div`
   position: absolute;
-  top: -15rem;
+  top: -10rem;
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;

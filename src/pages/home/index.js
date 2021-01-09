@@ -11,7 +11,7 @@ import bg from './bg.svg'
 import IconArrow from './icon-arrow';
 
 const IntroSection = styled.div`
-  background-color: hsl(200deg 36% 12%);
+  background-color: var(--darkBlue);
   color: var(--releasesContent);
   margin:
     calc(-1 * var(--pagePadding))
@@ -19,9 +19,13 @@ const IntroSection = styled.div`
     0
     calc(-1 * var(--pagePadding))
   ;
-  height: 90vh;
+  height: 50vh;
   position: relative;
   overflow: hidden;
+  
+  @media (min-width: 1000px) {
+    height: 90vh;
+  }
 `
 
 const MenuSection = styled.div`
@@ -60,8 +64,11 @@ const Divider = styled.div`
 
 const ExploreSection = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
   align-items: center;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 50% 50%;
+  }
 `
 
 const LinksSection = styled.div`
@@ -70,6 +77,10 @@ const LinksSection = styled.div`
   grid-template-columns: auto auto;
   max-width: max-content;
   gap: var(--space-m);
+
+  @media (min-width: 1000px) {
+    padding-right: var(--space-m);
+  }
 `
 
 const SectionLink = styled(Link)`
@@ -110,7 +121,7 @@ const HomePage = () => {
         </MenuSection>
 
         <ShapeContainer>
-          <Shape imageSrc={shape} size="calc(40vw + 20rem)" />
+          <Shape imageSrc={shape} size="calc(70vw + 5rem)" />
         </ShapeContainer>
       </IntroSection>
       <AboutSection>

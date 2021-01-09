@@ -6,7 +6,7 @@ import { Menu } from '../../ui-system/components/header';
 import Shape from '../../ui-system/components/shape';
 import Text from '../../ui-system/components/text';
 import { getReleasePath } from '../../utilities'
-import shape from './sh.png'
+import shape from '../../shapes/three.png'
 
 const getReleasesContent = () => {
   let result = []
