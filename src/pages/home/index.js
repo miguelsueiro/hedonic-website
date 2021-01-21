@@ -9,9 +9,11 @@ import threeSmall from '../../shapes/three-small.svg'
 import twoSmall from '../../shapes/two-small.png'
 import bg from './bg.svg'
 import IconArrow from './icon-arrow';
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+import NewsletterForm from '../../newsletter-form';
 
 const IntroSection = styled.div`
-  background-color: var(--darkBlue);
+  background-color: var(--c-darkBlue);
   color: var(--releasesContent);
   margin:
     calc(-1 * var(--pagePadding))
@@ -153,6 +155,9 @@ const HomePage = () => {
               subscribe to Hedonic <br />
               Reversal newsletter
             </Text>
+
+            <NewsletterForm />
+
           </NewsletterSection>
         </EndSection>
       </ExploreSection>

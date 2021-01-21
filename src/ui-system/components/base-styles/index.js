@@ -4,12 +4,12 @@ import { useBodyVars } from '../../../hooks';
 
 const styles = css`
   :root {
-    --darkBlue: #16242D;
+    --c-darkBlue: #16242D;
 
     --bodyBg: white;
-    --bodyContent: var(--darkBlue);
+    --bodyContent: var(--c-darkBlue);
     
-    --releasesBg: var(--darkBlue);
+    --releasesBg: var(--c-darkBlue);
     --releasesContent: white;
 
     --text-l: clamp(1.5rem, 2.1vw, 1.8rem);
