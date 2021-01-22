@@ -42,7 +42,6 @@ const styles = css`
     color: var(--bodyContent);
     transition: background 0.3s;
     font-family: QuioscoOne;
-    padding: var(--pagePadding);
     margin: 0;
   }
 

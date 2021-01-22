@@ -10,7 +10,8 @@ const InputWrapper = styled.input`
   border-bottom-color: var(--c-border);
 
   &:focus {
-    outline-color: var(--c-red);
+    border-bottom-color: var(--c-red);
+    outline: none;
   }
 `
 

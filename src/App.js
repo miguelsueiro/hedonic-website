@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
+  NavLink,
 } from "react-router-dom";
 import { artistsContent } from "./content/artists";
 import ArtistsPage from "./pages/artists";
@@ -13,6 +15,8 @@ import { getArtistPath, getReleasePath } from "./utilities";
 import BaseStyles from './ui-system/components/base-styles'
 import Header from "./ui-system/components/header";
 import HomePage from "./pages/home";
+import InfoPage from "./pages/info";
+import styled from "@emotion/styled";
 
 const getReleasesContent = () => {
   let result = []
@@ -28,11 +32,55 @@ const getReleasesContent = () => {
   return result
 }
 
+const PageWrapper = styled.div`
+  min-height: 80vh;
+  padding: var(--pagePadding);
+`
+
+const FooterWrapper = styled.div`
+  border-top: 1px solid hsla(0,0%,0%,0.2);
+  padding: var(--space-l) var(--pagePadding);
+  opacity: 0.4;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+
+  @media (min-width: 1100px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+const FooterLinksSection = styled.div`
+  display: flex;
+  
+  & > * + * {
+    @media (min-width: 1100px) {
+      margin-left: var(--space-l);
+    }
+    margin-left: var(--space-m);
+  }
+`
+
+const Footer = () => (
+  <FooterWrapper>
+    <FooterLinksSection>
+      <NavLink to="/releases">releases</NavLink>
+      <NavLink to="/artists">artists</NavLink>
+      <NavLink to="/info">info</NavLink>
+    </FooterLinksSection>
+    <div>© Copyright Hedonic Reversal 2020.</div>
+    <div>
+      Art direction by Miguel Sueiro.
+    </div>
+    <div>Website by <a href="https://hayk.design">Hayk</a></div>
+  </FooterWrapper>
+)
+
 const App = () => {
   return (
     <Router>
       <BaseStyles />
-      <div>
+      <PageWrapper>
         <Header menuTop='70vh'/>
         <Switch>
           {artistsContent.map((dataItem, index) => (
@@ -65,7 +113,7 @@ const App = () => {
             <ReleasesPage />
           </Route>
           <Route path="/info">
-            <Info />
+            <InfoPage />
           </Route>
           <Route path="/artists">
             <ArtistsPage />
@@ -74,13 +122,10 @@ const App = () => {
             <HomePage />
           </Route>
         </Switch>
-      </div>
+      </PageWrapper>
+      <Footer />
     </Router>
   );
-}
-
-function Info() {
-  return <h1>Info page</h1>;
 }
 
 export default App;

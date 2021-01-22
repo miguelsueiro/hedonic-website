@@ -34,6 +34,8 @@ const ShapeContainer = styled.div`
   margin: 0 auto;
   pointer-events: none;
   z-index: -1;
+  height: 45vw;
+  overflow: hidden;
 `
 
 const LinkWrapper = styled.div`

@@ -163,7 +163,7 @@ const HomePage = () => {
       </ExploreSection>
       <DistributionSection>
         <Text align="center">
-          Hedonic Reversal is distributed worldwide exclusively by <Text display="inline" color="red">Envelope Estructure</Text>
+          Hedonic Reversal is distributed worldwide <br />exclusively by <Text display="inline" color="red">Envelope Estructure</Text>
         </Text>
       </DistributionSection>
     </>

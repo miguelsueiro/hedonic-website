@@ -11,7 +11,8 @@ const ButtonWrapper = styled.button`
   background: none;
 
   &:focus {
-    outline-color: var(--c-red);
+    border-color: var(--c-red);
+    outline: none;
   }
 `
 
