@@ -64,13 +64,13 @@ export const Menu = ({ menuTop }) => (
   <MenuWrapper menuTop={menuTop}>
     <ul>
       <NavItem>
-        <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
+        <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
       </NavItem>
       <NavItem>
         <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
+        <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
       </NavItem>
     </ul>
   </MenuWrapper>
