@@ -9,7 +9,6 @@ import threeSmall from '../../shapes/three-small.svg'
 import twoSmall from '../../shapes/two-small.png'
 import bg from './bg.svg'
 import IconArrow from './icon-arrow';
-import MailchimpSubscribe from "react-mailchimp-subscribe"
 import NewsletterForm from '../../newsletter-form';
 
 const IntroSection = styled.div`
