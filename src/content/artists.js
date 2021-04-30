@@ -31,6 +31,7 @@ export const artistsContent = [
         images: [
           'back-vinyl.gif',
           'back.gif',
+          '0022784123_10.jpg',
         ],
         coverImage: 'cover.jpg',
       },

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Text from '../../ui-system/components/text'
 import Shape from '../../ui-system/components/shape';
 import { Menu } from '../../ui-system/components/header';
@@ -85,7 +85,6 @@ const NewsSection = styled.div`
 `
 
 const HomePage = () => {
-  // const [latestReleaseImage, setLatestReleaseImage] = useState()
   const getLatestRelease = (id) => {
     let result
     artistsContent.forEach((artist) => {
@@ -97,17 +96,15 @@ const HomePage = () => {
     })
     return result
   }
-
-  // useEffect(() => {
-  //   setLatestReleaseImage(
-  //     require(`../../content/images/releases/${latestReleaseContent.image}`).default
-  //   )
-  // }, [])
-
-  // console.log(latestReleaseImage)
-
+  
   const latestRelease = getLatestRelease(latestReleaseContent.albumId)
 
+  const getLatestReleaseImage = () => {
+    return latestRelease.images.filter((image) => image === latestReleaseContent.image).join()
+  }
+
+  const latestReleaseImageSrc = require(`../../content/images/releases/${getLatestReleaseImage()}`).default
+  
   return (
     <>
       <IntroSection>
@@ -131,7 +128,7 @@ const HomePage = () => {
             </Text>
           </Spacer>
         </div>
-        {latestReleaseContent.image}
+        <img alt="release cover" src={latestReleaseImageSrc}/>
       </LatestReleaseSection>
         
       <NewsSection>
