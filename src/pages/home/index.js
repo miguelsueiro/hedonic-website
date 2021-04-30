@@ -1,15 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react'
-import { Link } from "react-router-dom";
 import Text from '../../ui-system/components/text'
 import Shape from '../../ui-system/components/shape';
 import { Menu } from '../../ui-system/components/header';
 import shape from '../../shapes/one.png'
-import threeSmall from '../../shapes/three-small.svg'
-import twoSmall from '../../shapes/two-small.png'
-import bg from './bg.svg'
-import IconArrow from './icon-arrow';
 import NewsletterForm from '../../newsletter-form';
+import Spacer from '../../ui-system/components/spacer';
 
 const IntroSection = styled.div`
   background-color: var(--c-darkBlue);
@@ -20,12 +16,12 @@ const IntroSection = styled.div`
     0
     calc(-1 * var(--pagePadding))
   ;
-  height: 50vh;
+  height: 30vh;
   position: relative;
   overflow: hidden;
   
   @media (min-width: 1000px) {
-    height: 90vh;
+    height: 80vh;
   }
 `
 
@@ -33,6 +29,7 @@ const MenuSection = styled.div`
   position: absolute;
   left: var(--pagePadding);
   bottom: var(--pagePadding);
+  z-index: 100;
 `
 
 const ShapeContainer = styled.div`
@@ -47,70 +44,42 @@ const ShapeContainer = styled.div`
   align-items: flex-end;
 `
 
-const AboutSection = styled.div`
-  background-color: var(--c-red);
-  color: white;
-  margin: 0 calc(-1 * var(--pagePadding));
-  padding: var(--space-xl) var(--pagePadding) 0 var(--pagePadding);
-`
-
-const Divider = styled.div`
-  background-image: url('${bg}');
-  background-size: 1440px;
-  background-position: top center;
-  margin: 0 calc(-1 * var(--pagePadding));
-  height: 19rem;
-  background-repeat: repeat-x;
-`
-
-const ExploreSection = styled.div`
+const DistributionSection = styled.div`
+  padding: var(--space-l) 0;
   display: grid;
-  align-items: center;
+  place-content: center;
 
   @media (min-width: 1000px) {
-    grid-template-columns: 50% 50%;
+    padding: var(--space-xl) 0;
   }
 `
 
-const LinksSection = styled.div`
+const LatestReleaseSection = styled.div`
+  border-bottom: 1px solid var(--c-border);
+  padding: var(--space-l) 0;
   display: grid;
-  align-items: center;
-  grid-template-columns: auto auto;
-  max-width: max-content;
+  grid-template-columns: 1fr;
   gap: var(--space-m);
 
   @media (min-width: 1000px) {
-    padding-right: var(--space-m);
+    padding: var(--space-xl) 0;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr 1fr 2fr;
   }
 `
 
-const SectionLink = styled(Link)`
-  display: grid;
-  grid-template-columns: auto auto;
-  max-width: max-content;
-  align-items: center;
-  gap: var(--space-s);
-`
-
-const EndSection = styled.div`
-  border-left: 1px solid var(--c-border);
-  padding: var(--pagePadding);
-`
-
 const NewsSection = styled.div`
-  padding-bottom: var(--pagePadding);
-`
-
-const NewsletterSection = styled.div`
-  border-top: 1px solid var(--c-border);
-  padding-top: var(--pagePadding);
-`
-
-const DistributionSection = styled.div`
-  border-top: 1px solid var(--c-border);
-  padding: var(--space-2xl) 0;
+  border-bottom: 1px solid var(--c-border);
+  padding: var(--space-l) 0;
   display: grid;
-  place-content: center;
+  grid-template-columns: 1fr;
+  gap: var(--space-m);
+
+  @media (min-width: 1000px) {
+    padding: var(--space-xl) 0;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 `
 
 const HomePage = () => {
@@ -122,44 +91,39 @@ const HomePage = () => {
         </MenuSection>
 
         <ShapeContainer>
-          <Shape imageSrc={shape} size="calc(70vw + 5rem)" />
+          <Shape imageSrc={shape} size="calc(90vw + 5rem)" />
         </ShapeContainer>
       </IntroSection>
-      <AboutSection>
-        <Text size="l">
-          Hedonic Reversal is a record label based in Barcelona. Founded by Miguel Sueiro & Andrés Satué in 2016, the label intends to build a platform for emerging and consolidated musicians and sound projects from our environment. Intentionally stylistically wide, every edition has the sound experimentation, the direct contact with the artist and a carefully in-house designed artwork that dig deep in the main concept as a common denominator. Every artist is unique and every edition must reflect this idea. Hedonic Reversal also run a radio show under the nonprofit, community online radio Dublab BCN
-        </Text>
-      </AboutSection>
-      <Divider />
-      <ExploreSection>
-        <LinksSection>
-          <SectionLink to="/artists">
-            <IconArrow color="var(--c-red)"/>
-            <img src={twoSmall} alt="releases"/>
-          </SectionLink>
-          <SectionLink to="/releases">
-            <IconArrow color="currentColor"/>
-            <img src={threeSmall} alt="releases"/>
-          </SectionLink>
-        </LinksSection>
-        <EndSection>
-          <NewsSection>
-            <Text size="l" color="red">latest news</Text>
-            <Text size="l">
+      <LatestReleaseSection>
+        <Text size="l" color="red">latest release</Text>
+        <div>
+          <Text hasCaps>Refectori</Text>
+          <Text size="l">Tundra</Text>
+          <Spacer t="m">
+            <Text maxWidth="60ch">
+              Refectori is the project of the young catalan Xavier Longàs. Based on the experimental sound, that highlight physical and voluminous forms that roam glacial landscapes. Diving through dense and icy seas, it slowly emerges into light, encountering the earthly world between reverberated voices and nostalgic melodies.
+            </Text>
+          </Spacer>
+        </div>
+        <img alt="release cover" src="https://f4.bcbits.com/img/0022784123_10.jpg"/>
+      </LatestReleaseSection>
+        
+      <div>
+        <NewsSection>
+          <Text size="l" color="red">latest news</Text>
+          <div>
+            <Text size="l" maxWidth="40ch">
               Dublab Hedonic Reversal 030 New Hedonic Reversal radio show in Dublab BCN. On air next wednesday 21st december at 4:00 PM. Tune in from here.
             </Text>
-          </NewsSection>
-          <NewsletterSection>
-            <Text size="l" color="red">
-              subscribe to Hedonic <br />
-              Reversal newsletter
-            </Text>
-
-            <NewsletterForm />
-
-          </NewsletterSection>
-        </EndSection>
-      </ExploreSection>
+            <Spacer t="m">
+              <Text>
+                subscribe to Hedonic Reversal newsletter
+              </Text>
+              <NewsletterForm />
+            </Spacer>
+          </div>
+        </NewsSection>
+      </div>
       <DistributionSection>
         <Text align="center">
           Hedonic Reversal is distributed worldwide <br />exclusively by <Text display="inline" color="red">Envelope Estructure</Text>

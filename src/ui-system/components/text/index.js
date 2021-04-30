@@ -7,6 +7,7 @@ const TextWrapper = styled.div`
   color: ${p => `var(--c-${p.color})`};
   text-align: ${p => p.align};
   display: ${p => p.display};
+  max-width: ${p => p.maxWidth};
   
   ${p => p.hasCaps && css`
     letter-spacing: 0.7em;
@@ -14,9 +15,9 @@ const TextWrapper = styled.div`
   `};
 `
 
-const Text = ({children, size, hasCaps, color, align, display, ...props}) => {
+const Text = ({children, size, hasCaps, color, align, display, maxWidth, ...props}) => {
   return (
-    <TextWrapper size={size} hasCaps={hasCaps} color={color} align={align} display={display} {...props}>
+    <TextWrapper size={size} hasCaps={hasCaps} color={color} align={align} display={display} maxWidth={maxWidth} {...props}>
       {children}
     </TextWrapper>
   )
