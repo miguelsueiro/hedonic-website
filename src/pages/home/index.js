@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Text from '../../ui-system/components/text'
 import Shape from '../../ui-system/components/shape';
 import { Menu } from '../../ui-system/components/header';
@@ -85,6 +85,7 @@ const NewsSection = styled.div`
 `
 
 const HomePage = () => {
+  const [latestReleaseImage, setLatestReleaseImage] = useState()
   const getLatestRelease = (id) => {
     let result
     artistsContent.forEach((artist) => {
@@ -96,6 +97,12 @@ const HomePage = () => {
     })
     return result
   }
+
+  useEffect(() => {
+    setLatestReleaseImage(
+      require(`../../content/images/releases/${latestReleaseContent.image}`).default
+    )
+  }, [])
 
   const latestRelease = getLatestRelease(latestReleaseContent.albumId)
 
@@ -122,7 +129,7 @@ const HomePage = () => {
             </Text>
           </Spacer>
         </div>
-        <img alt="release cover" src={require(`../../content/images/releases/${latestReleaseContent.image}`).default}/>
+        <img alt="release cover" src={latestReleaseImage}/>
       </LatestReleaseSection>
         
       <NewsSection>
