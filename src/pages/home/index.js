@@ -98,11 +98,13 @@ const HomePage = () => {
     return result
   }
 
-  useEffect(() => {
-    setLatestReleaseImage(
-      require(`../../content/images/releases/${latestReleaseContent.image}`).default
-    )
-  }, [])
+  // useEffect(() => {
+  //   setLatestReleaseImage(
+  //     require(`../../content/images/releases/${latestReleaseContent.image}`).default
+  //   )
+  // }, [])
+
+  // console.log(latestReleaseImage)
 
   const latestRelease = getLatestRelease(latestReleaseContent.albumId)
 
@@ -129,7 +131,7 @@ const HomePage = () => {
             </Text>
           </Spacer>
         </div>
-        <img alt="release cover" src={latestReleaseImage}/>
+        {latestReleaseContent.image}
       </LatestReleaseSection>
         
       <NewsSection>
