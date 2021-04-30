@@ -23,7 +23,7 @@ const IntroSection = styled.div`
   overflow: hidden;
   
   @media (min-width: 1000px) {
-    height: 80vh;
+    height: 90vh;
   }
 `
 
