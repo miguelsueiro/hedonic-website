@@ -12,11 +12,13 @@ export const artistsContent = [
     },
     releases: [
       {
+        id: 1,
         albumId: '466129291',
         title: 'Espleni',
         catNumber: 'HEDREV-00004',
         releaseDate: '21 June 2019',
         format: 'Vinyl / Digital',
+        buyUrl: 'https://hedonicreversal.bandcamp.com/album/espleni',
         credits: [
           'Produced by Xavier Longàs',
           'Mastered by Pedro Pina',
@@ -46,11 +48,13 @@ export const artistsContent = [
     picture: 'orphan-swords.jpg',
     releases: [
       {
-        albumId: '466129292',
+        id: 2,
+        albumId: '466129291',
         title: 'Another',
         catNumber: 'HEDREV-00004',
         releaseDate: '21 June 2019',
         format: 'Vinyl / Digital',
+        buyUrl: 'https://hedonicreversal.bandcamp.com/album/espleni',
         credits: [
           'Produced by Xavier Longàs',
           'Mastered by Pedro Pina',
@@ -79,11 +83,13 @@ export const artistsContent = [
     picture: 'orphan-swords.jpg',
     releases: [
       {
-        albumId: '466129293',
+        id: 3,
+        albumId: '466129291',
         title: 'Just Like You',
         catNumber: 'HEDREV-00004',
         releaseDate: '21 June 2019',
         format: 'Vinyl / Digital',
+        buyUrl: 'https://hedonicreversal.bandcamp.com/album/espleni',
         credits: [
           'Produced by Xavier Longàs',
           'Mastered by Pedro Pina',

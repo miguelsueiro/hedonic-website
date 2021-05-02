@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink,
 } from "react-router-dom";
 import { artistsContent } from "./content/artists";
 import ArtistsPage from "./pages/artists";
@@ -16,6 +15,7 @@ import Header from "./ui-system/components/header";
 import HomePage from "./pages/home";
 import InfoPage from "./pages/info";
 import styled from "@emotion/styled";
+import Link from "./ui-system/components/link";
 
 const getReleasesContent = () => {
   let result = []
@@ -42,6 +42,12 @@ const FooterWrapper = styled.div`
   opacity: 0.4;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 1;
+    border-top: 1px solid hsla(0,0%,0%,0.1);
+  }
 
   @media (min-width: 1100px) {
     display: flex;
@@ -63,15 +69,15 @@ const FooterLinksSection = styled.div`
 const Footer = () => (
   <FooterWrapper>
     <FooterLinksSection>
-      <NavLink to="/releases">releases</NavLink>
-      <NavLink to="/artists">artists</NavLink>
-      <NavLink to="/info">info</NavLink>
+      <Link to="/releases">releases</Link>
+      <Link to="/artists">artists</Link>
+      <Link to="/info">info</Link>
     </FooterLinksSection>
     <div>© Copyright Hedonic Reversal 2020.</div>
     <div>
       Art direction by Miguel Sueiro.
     </div>
-    <div>Website by <a href="https://hayk.design">Hayk</a></div>
+    <div>Website by <Link href="https://hayk.design">Hayk</Link></div>
   </FooterWrapper>
 )
 
@@ -105,6 +111,7 @@ const App = () => {
                 releaseDate={content.releaseDate}
                 format={content.format}
                 albumId={content.albumId}
+                buyUrl={content.buyUrl}
               />
             </Route>
           ))}

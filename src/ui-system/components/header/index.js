@@ -24,6 +24,10 @@ const NavItem = styled.li`
       margin: auto;
       transition: 0.3s;
     }
+
+    &:hover {
+      color: var(--c-red);
+    }
   }
 
   .activeMenuNav {

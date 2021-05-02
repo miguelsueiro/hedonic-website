@@ -8,6 +8,7 @@ import NewsletterForm from '../../newsletter-form';
 import Spacer from '../../ui-system/components/spacer';
 import { artistsContent } from '../../content/artists';
 import { latestReleaseContent } from '../../content/latest-release';
+import { latestNewsContent } from '../../content/latest-news';
 
 const IntroSection = styled.div`
   background-color: var(--c-darkBlue);
@@ -89,7 +90,7 @@ const HomePage = () => {
     let result
     artistsContent.forEach((artist) => {
       artist.releases.forEach((release) => {
-        if (release.albumId === id) {
+        if (release.id === id) {
           result = release
         }
       })
@@ -97,14 +98,14 @@ const HomePage = () => {
     return result
   }
   
-  const latestRelease = getLatestRelease(latestReleaseContent.albumId)
+  const latestRelease = getLatestRelease(latestReleaseContent.id)
 
   const getLatestReleaseImage = () => {
     return latestRelease.images.filter((image) => image === latestReleaseContent.image).join()
   }
 
   const latestReleaseImageSrc = require(`../../content/images/releases/${getLatestReleaseImage()}`).default
-  
+
   return (
     <>
       <IntroSection>
@@ -122,29 +123,31 @@ const HomePage = () => {
         <div>
           <Text hasCaps>{latestRelease.author}</Text>
           <Text size="l">{latestRelease.title}</Text>
-          <Spacer t="m">
-            <Text maxWidth="60ch">
-              Refectori is the project of the young catalan Xavier Longàs. Based on the experimental sound, that highlight physical and voluminous forms that roam glacial landscapes. Diving through dense and icy seas, it slowly emerges into light, encountering the earthly world between reverberated voices and nostalgic melodies.
+          {latestReleaseContent.description && latestReleaseContent.description.map((content, index) => (
+            <Text as="p" maxWidth="60ch" key={index}>
+              {content}
             </Text>
-          </Spacer>
+          ))}
         </div>
         <img alt="release cover" src={latestReleaseImageSrc}/>
       </LatestReleaseSection>
         
-      <NewsSection>
-        <Text size="l" color="red">latest news</Text>
-        <div>
-          <Text size="l" maxWidth="40ch">
-            Dublab Hedonic Reversal 030 New Hedonic Reversal radio show in Dublab BCN. On air next wednesday 21st december at 4:00 PM. Tune in from here.
-          </Text>
-          <Spacer t="m">
-            <Text>
-              subscribe to Hedonic Reversal newsletter
+      {latestNewsContent && (
+        <NewsSection>
+          <Text size="l" color="red">latest news</Text>
+          <div>
+            <Text size="l" maxWidth="40ch">
+              {latestNewsContent}
             </Text>
-            <NewsletterForm />
-          </Spacer>
-        </div>
-      </NewsSection>
+            <Spacer t="m">
+              <Text>
+                subscribe to Hedonic Reversal newsletter
+              </Text>
+              <NewsletterForm />
+            </Spacer>
+          </div>
+        </NewsSection>
+      )}
       <DistributionSection>
         <Text align="center">
           Hedonic Reversal is distributed worldwide <br />exclusively by <Text display="inline" color="red">Envelope Estructure</Text>

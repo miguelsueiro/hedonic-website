@@ -35,14 +35,17 @@ const styles = css`
 
   * {
     line-height: var(--globalLineHeight);
+    box-sizing: border-box;
   }
 
   body {
     background-color: var(--bodyBg);
     color: var(--bodyContent);
     transition: background 0.3s;
-    font-family: QuioscoOne;
     margin: 0;
+    font-family: "QuioscoOne", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   a {
@@ -57,6 +60,21 @@ const styles = css`
 
   h1 {
     font-size: var(--text-xl);
+  }
+
+  ul {
+    margin: unset;
+    padding: unset;
+  }
+
+  li {
+    list-style: none;
+    margin: unset;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
   }
 `
 

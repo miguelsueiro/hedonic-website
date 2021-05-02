@@ -46,6 +46,10 @@ const ArtistLink = styled.a`
   text-decoration: underline;
   text-underline-position: under;
   margin-right: var(--space-s);
+
+  &:hover {
+    color: var(--c-red);
+  }
 `
 
 const ArtistPage = ({

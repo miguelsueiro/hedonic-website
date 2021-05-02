@@ -1,24 +1,3 @@
-body {
-  font-family: "QuioscoOne", -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-ul {
-  margin: unset;
-  padding: unset;
-}
-
-li {
-  list-style: none;
-  margin: unset;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .mt-s {
   margin-top: var(--space-s);
 }

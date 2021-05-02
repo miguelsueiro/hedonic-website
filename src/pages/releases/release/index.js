@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import { Link } from "react-router-dom";
+import Button from '../../../ui-system/components/button';
 import { Menu } from '../../../ui-system/components/header';
 import Player from '../../../ui-system/components/player';
 import Text from '../../../ui-system/components/text';
@@ -12,9 +13,7 @@ const Wrapper = styled.div`
 `
 
 const ImagesSection = styled.div`
-    margin-left: calc(-1 * var(--pagePadding));
-  @media (min-width: 1001px) {
-  }
+  margin-left: calc(-1 * var(--pagePadding));
   
   @media (max-width: 1000px) {
     margin-bottom: var(--space-m);
@@ -50,6 +49,12 @@ const CreditsSection = styled.div`
   opacity: 0.5;
 `
 
+const InfoSection = styled.div`
+  @media (min-width: 1001px) {
+    max-width: 34rem;
+  }
+`
+
 const ArtistLink = styled(Link)`
   transition: color 0.6s;
 
@@ -69,6 +74,7 @@ const ReleasePage = ({
   releaseDate,
   format,
   albumId,
+  buyUrl,
 }) => {
   return (
     <>
@@ -98,10 +104,18 @@ const ReleasePage = ({
           {format && <span>{format}</span>}
         </DetailsSection>
 
-        <div>
+        <InfoSection>
           {albumId && (
             <div className="mb-m">
               <Player album={albumId}/>
+            </div>
+          )}
+
+          {buyUrl && (
+            <div className="mb-m">
+              <Button as="a" href={buyUrl} target="_blank" hasFullWidth variant="fill">
+                Buy release
+              </Button>
             </div>
           )}
 
@@ -116,7 +130,7 @@ const ReleasePage = ({
             </CreditsSection>
           ))}
 
-        </div>
+        </InfoSection>
         
       </Wrapper>
     </>
