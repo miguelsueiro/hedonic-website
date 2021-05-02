@@ -9,9 +9,13 @@ export const useBodyVars = () => {
     if(location.pathname.includes("/releases")) {
       style.setProperty('--bodyBg', 'var(--releasesBg)');
       style.setProperty('--bodyContent', 'var(--releasesContent)');
+      style.setProperty('--bodyContentDimmed', 'var(--releasesContentDimmed)');
+      style.setProperty('--c-border', 'var(--c-borderLight)');
     } else {
       style.removeProperty('--bodyBg');
       style.removeProperty('--bodyContent');
+      style.removeProperty('--bodyContentDimmed');
+      style.removeProperty('--c-border');
     }
 
     window.scrollTo(0, 0);

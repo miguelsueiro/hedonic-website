@@ -4,20 +4,23 @@ import { useBodyVars } from '../../../hooks';
 
 const styles = css`
   :root {
-    --c-darkBlue: #16242D;
+    --c-darkBlue: hsl(203, 34%, 13%);
 
     --bodyBg: white;
     --bodyContent: var(--c-darkBlue);
+    --bodyContentDimmed: hsla(203, 34%, 13%, 60%);
     
     --releasesBg: var(--c-darkBlue);
     --releasesContent: white;
+    --releasesContentDimmed: hsla(203, 34%, 83%, 70%);  
 
     --text-l: clamp(1.5rem, 2.1vw, 1.8rem);
     --text-xl: clamp(2rem, 4.5vw, 4rem);
     --text-2xl: clamp(3rem, 6vw, 5rem);
 
     --c-red: #E3352E;
-    --c-border: hsla(0,0%,0%,0.1);
+    --c-border: hsl(203, 34%, 13%, 10%);
+    --c-borderLight: hsla(203, 34%, 83%, 10%);
 
     --lineHeightFixedAmount: 0.5rem;
     --lineHeightRelativeAmount: 0.9em;
@@ -36,6 +39,10 @@ const styles = css`
   * {
     line-height: var(--globalLineHeight);
     box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
   }
 
   body {

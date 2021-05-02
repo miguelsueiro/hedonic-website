@@ -33,7 +33,7 @@ const ImagesSection = styled.div`
 const DetailsSection = styled.div`
   writing-mode: vertical-rl;
   padding: 0 var(--space-m);
-  opacity: 0.5;
+  color: var(--bodyContentDimmed);
   letter-spacing: 0.2em;
 
   @media (max-width: 1000px) {
@@ -46,7 +46,7 @@ const DetailsSection = styled.div`
 `
 
 const CreditsSection = styled.div`
-  opacity: 0.5;
+  color: var(--bodyContentDimmed);
 `
 
 const InfoSection = styled.div`

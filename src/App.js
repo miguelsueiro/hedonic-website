@@ -32,21 +32,20 @@ const getReleasesContent = () => {
 }
 
 const PageWrapper = styled.div`
-  min-height: 80vh;
-  padding: var(--pagePadding);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 `
 
 const FooterWrapper = styled.div`
-  border-top: 1px solid hsla(0,0%,0%,0.2);
+  border-top: 1px solid var(--c-border);
   padding: var(--space-l) var(--pagePadding);
-  opacity: 0.4;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   transition: 0.2s;
 
-  &:hover {
-    opacity: 1;
-    border-top: 1px solid hsla(0,0%,0%,0.1);
+  &:not(:hover) {
+    color: var(--bodyContentDimmed);
   }
 
   @media (min-width: 1100px) {
@@ -64,6 +63,10 @@ const FooterLinksSection = styled.div`
     }
     margin-left: var(--space-m);
   }
+`
+
+const MainWrapper = styled.div`
+  padding: var(--pagePadding);
 `
 
 const Footer = () => (
@@ -86,50 +89,52 @@ const App = () => {
     <Router>
       <BaseStyles />
       <PageWrapper>
-        <Header menuTop='70vh'/>
-        <Switch>
-          {artistsContent.map((dataItem, index) => (
-            <Route path={getArtistPath(dataItem.name)} key={index}>
-              <ArtistPage
-                name={dataItem.name}
-                bio={dataItem.bio}
-                picture={dataItem.picture}
-                releases={dataItem.releases}
-                links={dataItem.links}
-              />
+        <MainWrapper>
+          <Header menuTop='70vh'/>
+          <Switch>
+            {artistsContent.map((dataItem, index) => (
+              <Route path={getArtistPath(dataItem.name)} key={index}>
+                <ArtistPage
+                  name={dataItem.name}
+                  bio={dataItem.bio}
+                  picture={dataItem.picture}
+                  releases={dataItem.releases}
+                  links={dataItem.links}
+                />
+              </Route>
+            ))}
+            {getReleasesContent().map((content, index) => (
+              <Route path={getReleasePath(content.title)} key={index}>
+                <ReleasePage
+                  author={content.author}
+                  title={content.title}
+                  images={content.images}
+                  catNumber={content.catNumber}
+                  credits={content.credits}
+                  description={content.description}
+                  releaseDate={content.releaseDate}
+                  format={content.format}
+                  albumId={content.albumId}
+                  buyUrl={content.buyUrl}
+                />
+              </Route>
+            ))}
+            <Route path="/releases">
+              <ReleasesPage />
             </Route>
-          ))}
-          {getReleasesContent().map((content, index) => (
-            <Route path={getReleasePath(content.title)} key={index}>
-              <ReleasePage
-                author={content.author}
-                title={content.title}
-                images={content.images}
-                catNumber={content.catNumber}
-                credits={content.credits}
-                description={content.description}
-                releaseDate={content.releaseDate}
-                format={content.format}
-                albumId={content.albumId}
-                buyUrl={content.buyUrl}
-              />
+            <Route path="/info">
+              <InfoPage />
             </Route>
-          ))}
-          <Route path="/releases">
-            <ReleasesPage />
-          </Route>
-          <Route path="/info">
-            <InfoPage />
-          </Route>
-          <Route path="/artists">
-            <ArtistsPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
+            <Route path="/artists">
+              <ArtistsPage />
+            </Route>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+        </MainWrapper>
+        <Footer />
       </PageWrapper>
-      <Footer />
     </Router>
   );
 }
