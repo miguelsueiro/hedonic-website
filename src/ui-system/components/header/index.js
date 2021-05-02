@@ -49,8 +49,9 @@ const LogoSection = styled(Link)`
   }
 `
 
-const MenuWrapper = styled.div`
+const MenuWrapper = styled.ul`
   font-size: var(--text-l);
+  max-width: 90%;
   ${p => p.menuTop && `margin-top: ${p.menuTop}`};
 
   @media (max-width: 600px) {    
@@ -70,17 +71,15 @@ const Wrapper = styled.div`
 
 export const Menu = ({ menuTop }) => (
   <MenuWrapper menuTop={menuTop}>
-    <ul>
-      <NavItem>
-        <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
-      </NavItem>
-    </ul>
+    <NavItem>
+      <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
+    </NavItem>
+    <NavItem>
+      <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
+    </NavItem>
+    <NavItem>
+      <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
+    </NavItem>
   </MenuWrapper>
 )
 
