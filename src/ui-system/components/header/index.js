@@ -52,6 +52,10 @@ const LogoSection = styled(Link)`
 const MenuWrapper = styled.div`
   font-size: var(--text-l);
   ${p => p.menuTop && `margin-top: ${p.menuTop}`};
+
+  @media (max-width: 600px) {    
+    margin-top: var(--space-l);
+  }
 `
 
 const Wrapper = styled.div`

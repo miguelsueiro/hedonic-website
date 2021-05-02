@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { Menu } from '../../../ui-system/components/header';
 import Text from '../../../ui-system/components/text';
+import Link from '../../../ui-system/components/link';
 import { getReleasePath } from '../../../utilities';
 
 const Wrapper = styled.div`
@@ -38,18 +38,10 @@ const ReleasesSection = styled.div`
   `
 
 const LinksSection = styled.div`
-  display: flex;
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: var(--space-s);
   margin-bottom: var(--space-m);
-`
-
-const ArtistLink = styled.a`
-  text-decoration: underline;
-  text-underline-position: under;
-  margin-right: var(--space-s);
-
-  &:hover {
-    color: var(--c-red);
-  }
 `
 
 const ArtistPage = ({
@@ -80,7 +72,7 @@ const ArtistPage = ({
             
             <LinksSection>
               {links && Object.entries(links).map(([key, value], index) => (
-                <ArtistLink href={value} key={index}>{key}</ArtistLink>
+                <Link hasUnderline href={value} key={index}>{key}</Link>
               ))}
             </LinksSection>
 
