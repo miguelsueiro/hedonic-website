@@ -9,6 +9,9 @@ import Spacer from '../../ui-system/components/spacer';
 import { artistsContent } from '../../content/artists';
 import { latestReleaseContent } from '../../content/latest-release';
 import { latestNewsContent } from '../../content/latest-news';
+import Link from '../../ui-system/components/link';
+import { getReleasePath } from '../../utilities';
+import { NavLink } from 'react-router-dom';
 
 const IntroSection = styled.div`
   background-color: var(--c-darkBlue);
@@ -85,6 +88,10 @@ const NewsSection = styled.div`
   }
 `
 
+const ReleaseImageLink = styled(NavLink)`
+  display: block;
+`
+
 const HomePage = () => {
   const getLatestRelease = (id) => {
     let result
@@ -128,8 +135,11 @@ const HomePage = () => {
               {content}
             </Text>
           ))}
+          <Link hasUnderline to={getReleasePath(latestRelease.title)}>See release</Link>
         </div>
-        <img alt="release cover" src={latestReleaseImageSrc}/>
+        <ReleaseImageLink to={getReleasePath(latestRelease.title)}>
+          <img alt="release cover" src={latestReleaseImageSrc}/>
+        </ReleaseImageLink>
       </LatestReleaseSection>
         
       {latestNewsContent && (
