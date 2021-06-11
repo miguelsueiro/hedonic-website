@@ -49,7 +49,7 @@ const Form = ({ status, message, onValidated }) => {
   );
 };
 
-const url = "https://gmail.us7.list-manage.com/subscribe/post?u=48ab2889965922393eccfab34&amp;id=cfeddd259b"
+const url = "https://hedonicreversal.us7.list-manage.com/subscribe/post?u=252f52131c11619d28df68b2c&amp;id=a551bbfc85"
 
 const NewsletterForm = () => (
   <MailchimpSubscribe
