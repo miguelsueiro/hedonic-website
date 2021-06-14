@@ -279,7 +279,7 @@ export const artistsContent = [
           'orphanswords-ascent-05.jpg',
           'orphanswords-ascent-06.jpg',          
         ],
-        coverImage: 'cover.jpg',
+        coverImage: 'orphanswords-ascent-cover.jpg',
         listPosition: 5,
       },
     ],
