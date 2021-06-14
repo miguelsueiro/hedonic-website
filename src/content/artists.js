@@ -38,7 +38,6 @@ export const artistsContent = [
           'huma-tresfases-03.jpg',
           'huma-tresfases-04.jpg',
           'huma-tresfases-05.jpg',          
-          '0022784123_10.jpg',
         ],
         coverImage: 'huma-tresfases-cover.jpg',
       },
@@ -157,7 +156,7 @@ export const artistsContent = [
     },
     releases: [
       {
-        id: 3,
+        id: 7,
         albumId: '2436117798',
         title: 'Just Like You',
         catNumber: 'HEDREV-00003',
