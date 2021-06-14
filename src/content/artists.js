@@ -157,7 +157,7 @@ export const artistsContent = [
     },
     releases: [
       {
-        id: 0000671,
+        id: 7,
         albumId: '466129291',
         title: 'Temazos vol1',
         catNumber: 'HEDREV-00004',
@@ -192,7 +192,7 @@ export const artistsContent = [
     picture: 'orphan-swords.jpg',
     releases: [
       {
-        id: 56757,
+        id: 8,
         albumId: '466129291',
         title: 'Another',
         catNumber: 'HEDREV-00004',
@@ -227,7 +227,7 @@ export const artistsContent = [
     picture: 'orphan-swords.jpg',
     releases: [
       {
-        id: 45754756,
+        id: 9,
         albumId: '466129291',
         title: 'Just Like You',
         catNumber: 'HEDREV-00004',
