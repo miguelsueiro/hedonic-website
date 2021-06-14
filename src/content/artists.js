@@ -66,7 +66,7 @@ export const artistsContent = [
         coverImage: 'huma-yocto-cover.jpg',
       },    
       {
-        id: 4,
+        id: 3,
         albumId: '3277444269',
         title: 'Eva',
         catNumber: 'HEDREV-00006',
@@ -92,7 +92,7 @@ export const artistsContent = [
         coverImage: 'huma-eva-cover.jpg',
       },  
       {
-        id: 5,
+        id: 4,
         albumId: '695194201',
         title: 'Eva Remixes',
         catNumber: 'HEDREV-00006b',
@@ -115,7 +115,7 @@ export const artistsContent = [
         coverImage: 'huma-evaremixes-cover.jpg',
       },     
       {
-        id: 6,
+        id: 5,
         albumId: '1673263714',
         title: 'Emergence',
         catNumber: 'HEDREV-00009',
@@ -156,7 +156,7 @@ export const artistsContent = [
     },
     releases: [
       {
-        id: 7,
+        id: 6,
         albumId: '2436117798',
         title: 'Just Like You',
         catNumber: 'HEDREV-00003',
