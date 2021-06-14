@@ -108,7 +108,7 @@ const HomePage = () => {
   const latestRelease = getLatestRelease(latestReleaseContent.id)
 
   const getLatestReleaseImage = () => {
-    return latestRelease.images.filter((image) => image === latestReleaseContent.image).join()
+    return latestReleaseContent.image
   }
 
   const latestReleaseImageSrc = require(`../../content/images/releases/${getLatestReleaseImage()}`).default
