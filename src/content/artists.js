@@ -40,6 +40,7 @@ export const artistsContent = [
           'huma-tresfases-05.jpg',          
         ],
         coverImage: 'huma-tresfases-cover.jpg',
+        listPosition: 8,
       },
       {
         id: 2,
@@ -64,6 +65,7 @@ export const artistsContent = [
           'huma-yocto-00.jpg',
         ],
         coverImage: 'huma-yocto-cover.jpg',
+        listPosition: 7,
       },    
       {
         id: 3,
@@ -90,6 +92,7 @@ export const artistsContent = [
           'huma-eva-04.jpg',          
         ],
         coverImage: 'huma-eva-cover.jpg',
+        listPosition: 6,
       },  
       {
         id: 4,
@@ -113,6 +116,7 @@ export const artistsContent = [
           'huma-evaremixes-00.jpg',
         ],
         coverImage: 'huma-evaremixes-cover.jpg',
+        listPosition: 5,
       },     
       {
         id: 5,
@@ -137,6 +141,7 @@ export const artistsContent = [
           'huma-emergence-00.jpg',
         ],
         coverImage: 'huma-emergence-cover.jpg',
+        listPosition: 4,
       },           
     ],
   },
@@ -183,6 +188,7 @@ export const artistsContent = [
           'blumeattempt-justlikeyou-06.jpg',          
         ],
         coverImage: 'blumeattempt-justlikeyou-cover.jpg',
+        listPosition: 3,
       },
     ],
   },
@@ -218,6 +224,7 @@ export const artistsContent = [
           'back.gif',
         ],
         coverImage: 'cover.jpg',
+        listPosition: 2,
       },
     ],
   },
@@ -253,6 +260,7 @@ export const artistsContent = [
           'back.gif',
         ],
         coverImage: 'cover.jpg',
+        listPosition: 1,
       },
     ],
   },

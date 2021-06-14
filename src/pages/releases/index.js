@@ -22,6 +22,16 @@ const getReleasesContent = () => {
   return result
 }
 
+const releasesList = getReleasesContent()
+
+releasesList.sort((a, b) => {
+  if(a.listPosition > b.listPosition) {
+    return 1
+  } else {
+    return -1
+  }
+})
+
 const PageWrapper = styled.div`
   position: relative;
 `
@@ -64,7 +74,7 @@ const ReleasesPage = () => {
       <PageWrapper className="mt-xl">
         <nav>
           <ul>
-            {getReleasesContent().map((release, index) => (
+            {releasesList.map((release, index) => (
               <LinkWrapper key={index}>
                 <Link to={getReleasePath(release.title)}>
                   <Text as="span" hasCaps>{release.author}</Text>
