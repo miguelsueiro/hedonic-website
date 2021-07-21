@@ -316,7 +316,7 @@ export const artistsContent = [
           'In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks' building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the album's brief moments.',
         ],
         images: [
-          'iom-izkuturik.jpg',  
+          'iom-izkuturik-00.jpg',  
         ],
         coverImage: 'iom-izkuturik-cover.jpg',
         listPosition: 8,
