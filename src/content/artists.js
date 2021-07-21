@@ -141,7 +141,7 @@ export const artistsContent = [
           'huma-emergence-00.jpg',
         ],
         coverImage: 'huma-emergence-cover.jpg',
-        listPosition: 8,
+        listPosition: 9,
       },           
     ],
   },
@@ -253,7 +253,7 @@ export const artistsContent = [
     releases: [
       {
         id: 9,
-        albumId: '466129291',
+        albumId: '2966684029',
         title: 'Ascent',
         catNumber: 'HEDREV-00005',
         releaseDate: '21 June 2019',
@@ -281,6 +281,45 @@ export const artistsContent = [
         ],
         coverImage: 'orphanswords-ascent-cover.jpg',
         listPosition: 5,
+      },
+    ],
+  },
+  // --------------------------------------------------------
+  {
+    name: 'IOM',
+    bio: [
+      'Iker Ormazabal was born in Vitoria and lives in London. He started his solo project IOM circa 2004. He has also been a member of bands like Atomoog, Sorkun, FFT Players, Soizu, Oilbag Mnemoniic o Warren Schoenbright and has published music in labels such as: Zulo Beltzak, RONF, Doministiku, Desetxea, Afeite Al Perro, Astral Noize, Attenuation Circuit, Mattoid and Hominid Sounds.',
+      'He has previously worked alongside other artists such as Arturo Blasco, Jordi Aligué, Borja Ramos, Miguel A García, Raxil4, Itto Morita, Minako Seki, Gonzalo Catalinas among others. In 2017, he was awarded with the John Leckie Award for Innovation in Audio Production for a soundtrack to "Elementary Tryptych of Spain" by Jose Val del Omar. He also runs his own effects-pedal brand, IOHM Fx.',
+    ],
+    picture: 'iom.jpg',
+    links: {
+      bandcamp: 'https://ikerormazabal.bandcamp.com',
+    },    
+    releases: [
+      {
+        id: 10,
+        albumId: '2695128972',
+        title: 'Izkuturik ziren hitzak eztabaiden artean aurkitu ditut, baino soinurik ez dute egiten',
+        catNumber: 'HEDREV-00007',
+        releaseDate: '10 December 2020',
+        format: 'Cassette / Digital',
+        buyUrl: 'https://hedonicreversal.bandcamp.com/album/izkuturik-ziren-hitzak-eztabaiden-artean-aurkitu-ditut-baino-soinurik-ez-dute-egiten',
+        credits: [
+          'Iker Ormazabal: Arturia Mini Brute, Sherman Filterbank, Elektron Octatrack, Trogotronic 669 and several pedals from IOhM Fx.',
+          'Recorded in Ableton Live and mixed in Pro Tools.',
+          'Miguel Sueiro: Art direction & design.',
+          'Teresa Espadafor: Photography.',
+          '© 2020 www.hedonicreversal.com', 
+        ],
+        description: [
+          'Time is the main subject matter in IOMs music. Kronos and Kairos are the two greek words which describe its different facets. Kronos refers to the chronological character and its human perception, while the latter refers to the propitious moment and the permanent condition of time. My main interest, is the intersection between these two characteristics in the present moment.',
+          'In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks' building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the album's brief moments.',
+        ],
+        images: [
+          'iom-izkuturik.jpg',  
+        ],
+        coverImage: 'iom-izkuturik-cover.jpg',
+        listPosition: 8,
       },
     ],
   },
