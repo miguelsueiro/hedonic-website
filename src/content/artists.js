@@ -313,7 +313,7 @@ export const artistsContent = [
         ],
         description: [
           'Time is the main subject matter in IOMs music. Kronos and Kairos are the two greek words which describe its different facets. Kronos refers to the chronological character and its human perception, while the latter refers to the propitious moment and the permanent condition of time. My main interest, is the intersection between these two characteristics in the present moment.',
-          'In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks' building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the album's brief moments.',
+          'In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the albums brief moments.',
         ],
         images: [
           'iom-izkuturik-00.jpg',  
