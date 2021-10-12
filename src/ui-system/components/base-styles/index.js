@@ -15,7 +15,7 @@ const styles = css`
     --releasesContentDimmed: hsla(203, 34%, 83%, 70%);  
 
     --text-l: clamp(1.5rem, 2.1vw, 1.8rem);
-    --text-xl: clamp(2rem, 4.5vw, 4rem);
+    --text-xl: clamp(2rem, 4.5vw, 3rem);
     --text-2xl: clamp(3rem, 6vw, 5rem);
 
     --c-red: #E3352E;

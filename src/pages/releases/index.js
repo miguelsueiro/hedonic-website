@@ -49,6 +49,15 @@ const ShapeContainer = styled.div`
 `
 
 const LinkWrapper = styled.div`
+  @media(min-width: 800px) {
+    padding-left: ${p => p.index * 5}vw;
+  }
+  
+  /* @media(min-width: 1500px) {
+    padding-left: ${p => p.index * 100}px;
+  } */
+
+
   a {
     text-decoration: none;
     transition: 0.6s;
@@ -70,12 +79,12 @@ const ReleasesPage = () => {
         <nav>
           <ul>
             {releasesList.map((release, index) => (
-              <LinkWrapper key={index} style={{paddingLeft: `${index * 4}vw`}}>
+              <LinkWrapper key={index} index={index}>
                 <Link to={getReleasePath(release.title)}>
                   <Text as="span" hasCaps>{release.author}</Text>
                   <Text isDimmed as="span">{release.catNumber}</Text>
                   <br />
-                  <Text as="span" size="xl">{release.title}</Text>
+                  <Text as="span" size="xl" display="block" maxWidth="30ch">{release.title}</Text>
                 </Link>
               </LinkWrapper>
             ))}
