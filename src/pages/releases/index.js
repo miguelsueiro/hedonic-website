@@ -1,20 +1,16 @@
-<<<<<<< Updated upstream
 import React from 'react'
 import { Link } from "react-router-dom";
 import { artistsContent } from '../../content/artists';
 import { getReleasePath } from '../../utilities'
-=======
 import { Link } from "react-router-dom";
 import { Menu } from "../../ui-system/components/header";
 import Morph from "../../ui-system/components/morph";
 import React from "react";
-import Shape from "../../ui-system/components/shape";
 import Text from "../../ui-system/components/text";
 import { artistsContent } from "../../content/artists";
 import { getReleasePath } from "../../utilities";
 import shape from "../../shapes/three.png";
 import styled from "@emotion/styled";
->>>>>>> Stashed changes
 
 const getReleasesContent = () => {
   let result = [];
@@ -25,25 +21,6 @@ const getReleasesContent = () => {
     });
   });
 
-<<<<<<< Updated upstream
-const ReleasesPage = () => {
-  return (
-    <div>
-      <nav>
-        <ul>
-          {getReleasesContent().map((content, index) => (
-            <li key={index}>
-              <Link to={getReleasePath(content.title)}>
-                {content.title}
-                <br />
-                {content.author}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
-=======
   return result;
 };
 
@@ -135,7 +112,6 @@ const ReleasesPage = () => {
         </ShapeContainer>
       </PageWrapper>
     </>
->>>>>>> Stashed changes
   );
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -12,7 +11,6 @@ import ArtistPage from "./pages/artists/artist";
 import ReleasesPage from "./pages/releases";
 import ReleasePage from "./pages/releases/release";
 import { getArtistPath, getReleasePath } from "./utilities";
-=======
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { getArtistPath, getReleasePath } from "./utilities";
 
@@ -29,7 +27,6 @@ import ReleasePage from "./pages/releases/release";
 import ReleasesPage from "./pages/releases";
 import { artistsContent } from "./content/artists";
 import styled from "@emotion/styled";
->>>>>>> Stashed changes
 
 const getReleasesContent = () => {
   let result = [];
@@ -43,38 +40,6 @@ const getReleasesContent = () => {
   return result;
 };
 
-<<<<<<< Updated upstream
-const App = () => {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/artists">Artists</Link>
-            </li>
-            <li>
-              <Link to="/releases">Releases</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          {artistsContent.map((dataItem) => (
-            <Route path={getArtistPath(dataItem.name)}>
-              <ArtistPage
-                name={dataItem.name}
-                bio={dataItem.bio}
-                picture={dataItem.picture}
-                releases={dataItem.releases}
-              />
-=======
 const PageWrapper = styled.div`
   min-height: 100%;
   display: grid;
@@ -174,7 +139,6 @@ const App = () => {
             </Route>
             <Route path="/artists">
               <ArtistsPage />
->>>>>>> Stashed changes
             </Route>
           ))}
           {getReleasesContent().map((content) => (
