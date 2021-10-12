@@ -3,9 +3,24 @@ import React from 'react'
 import { Menu } from '../../ui-system/components/header';
 import Link from '../../ui-system/components/link';
 import Text from '../../ui-system/components/text';
+import shape from '../../shapes/four.png'
+import Shape from '../../ui-system/components/shape';
+
+const ShapeContainer = styled.div`
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+`
 
 const PageWrapper = styled.div`
   position: relative;
+  padding-top: 30vh;
 
   @media (min-width: 1100px) {
     display: grid;
@@ -62,6 +77,9 @@ const InfoPage = () => {
           </Text>
         </div>
       </PageWrapper>
+      <ShapeContainer>
+        <Shape imageSrc={shape} size="calc(30vw + 20rem)" />
+      </ShapeContainer>
     </>
   );
 }

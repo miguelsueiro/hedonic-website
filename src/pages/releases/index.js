@@ -37,32 +37,27 @@ const PageWrapper = styled.div`
 `
 
 const ShapeContainer = styled.div`
-  position: absolute;
-  top: calc(-1 * var(--space-xl));
-  left: 50%;
-  transform: translate(-50%);
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  left: 0;
   pointer-events: none;
   z-index: -1;
-  height: calc(12rem + 35vw);
-  overflow: hidden;
+  display: grid;
+  place-items: center;
 `
 
 const LinkWrapper = styled.div`
   a {
-    display: flex;
-    align-items: baseline;
     text-decoration: none;
     transition: 0.6s;
+    margin-bottom: 1em;
+    display: block;
     
     &:hover {
       transition: 0s;
       color: var(--c-red);
-    }
-
-    @media(max-width: 1000px) {
-      flex-direction: column;
-      margin-bottom: var(--space-m);
     }
   }
 `
@@ -75,9 +70,11 @@ const ReleasesPage = () => {
         <nav>
           <ul>
             {releasesList.map((release, index) => (
-              <LinkWrapper key={index}>
+              <LinkWrapper key={index} style={{paddingLeft: `${index * 4}vw`}}>
                 <Link to={getReleasePath(release.title)}>
                   <Text as="span" hasCaps>{release.author}</Text>
+                  <Text isDimmed as="span">{release.catNumber}</Text>
+                  <br />
                   <Text as="span" size="xl">{release.title}</Text>
                 </Link>
               </LinkWrapper>

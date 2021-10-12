@@ -8,16 +8,18 @@ const TextWrapper = styled.div`
   text-align: ${p => p.align};
   display: ${p => p.display};
   max-width: ${p => p.maxWidth};
+  ${p => p.isDimmed && `opacity: 0.6`};
   
   ${p => p.hasCaps && css`
-    letter-spacing: 0.7em;
+    letter-spacing: 0.6em;
     text-transform: uppercase;
+    font-weight: 700;
   `};
 `
 
-const Text = ({children, size, hasCaps, color, align, display, maxWidth, ...props}) => {
+const Text = ({children, size, hasCaps, color, align, display, maxWidth, isDimmed, ...props}) => {
   return (
-    <TextWrapper size={size} hasCaps={hasCaps} color={color} align={align} display={display} maxWidth={maxWidth} {...props}>
+    <TextWrapper size={size} hasCaps={hasCaps} color={color} align={align} display={display} maxWidth={maxWidth} isDimmed={isDimmed} {...props}>
       {children}
     </TextWrapper>
   )
