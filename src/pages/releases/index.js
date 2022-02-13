@@ -51,9 +51,9 @@ const ShapeContainer = styled.div`
 `;
 
 const LinkWrapper = styled.div`
-  @media (min-width: 800px) {
-    padding-left: ${(p) => p.index * 5}vw;
-  }
+  // @media (min-width: 800px) {
+  //   padding-left: ${(p) => p.index * 5}vw;
+  // }
 
   a {
     text-decoration: none;
