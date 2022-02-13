@@ -1,41 +1,37 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import { artistsContent } from "./content/artists";
-import ArtistsPage from "./pages/artists";
-import ArtistPage from "./pages/artists/artist";
-import ReleasesPage from "./pages/releases";
-import ReleasePage from "./pages/releases/release";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { getArtistPath, getReleasePath } from "./utilities";
-import BaseStyles from './ui-system/components/base-styles'
+
+import ArtistPage from "./pages/artists/artist";
+import ArtistsPage from "./pages/artists";
+import BaseStyles from "./ui-system/components/base-styles";
 import Header from "./ui-system/components/header";
 import HomePage from "./pages/home";
 import InfoPage from "./pages/info";
-import styled from "@emotion/styled";
 import Link from "./ui-system/components/link";
+import React from "react";
+import ReleasePage from "./pages/releases/release";
+import ReleasesPage from "./pages/releases";
+import UISystemPage from "./pages/ui-system";
+import { artistsContent } from "./content/artists";
+import styled from "@emotion/styled";
 
 const getReleasesContent = () => {
-  let result = []
+  let result = [];
 
   artistsContent.forEach((content, index) => {
-    content.releases.forEach(obj => {
-      result.push(
-        Object.assign(obj, {author: artistsContent[index].name})
-      );
-    })
+    content.releases.forEach((obj) => {
+      result.push(Object.assign(obj, { author: artistsContent[index].name }));
+    });
   });
-  
-  return result
-}
+
+  return result;
+};
 
 const PageWrapper = styled.div`
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
-`
+`;
 
 const FooterWrapper = styled.div`
   border-top: 1px solid var(--c-border);
@@ -52,22 +48,22 @@ const FooterWrapper = styled.div`
     display: flex;
     justify-content: space-between;
   }
-`
+`;
 
 const FooterLinksSection = styled.div`
   display: flex;
-  
+
   & > * + * {
     @media (min-width: 1100px) {
       margin-left: var(--space-l);
     }
     margin-left: var(--space-m);
   }
-`
+`;
 
 const MainWrapper = styled.div`
   padding: var(--pagePadding);
-`
+`;
 
 const Footer = () => (
   <FooterWrapper>
@@ -77,12 +73,12 @@ const Footer = () => (
       <Link to="/info">info</Link>
     </FooterLinksSection>
     <div>© Copyright Hedonic Reversal 2020.</div>
+    <div>Art direction by Miguel Sueiro.</div>
     <div>
-      Art direction by Miguel Sueiro.
+      Website by <Link href="https://hayk.design">Hayk</Link>
     </div>
-    <div>Website by <Link href="https://hayk.design">Hayk</Link></div>
   </FooterWrapper>
-)
+);
 
 const App = () => {
   return (
@@ -90,7 +86,7 @@ const App = () => {
       <BaseStyles />
       <PageWrapper>
         <MainWrapper>
-          <Header menuTop='70vh'/>
+          <Header menuTop="70vh" />
           <Switch>
             {artistsContent.map((dataItem, index) => (
               <Route path={getArtistPath(dataItem.name)} key={index}>
@@ -128,6 +124,9 @@ const App = () => {
             <Route path="/artists">
               <ArtistsPage />
             </Route>
+            <Route path="/ui-system">
+              <UISystemPage />
+            </Route>
             <Route path="/">
               <HomePage />
             </Route>
@@ -137,6 +136,6 @@ const App = () => {
       </PageWrapper>
     </Router>
   );
-}
+};
 
 export default App;
