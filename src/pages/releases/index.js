@@ -97,7 +97,6 @@ const ReleasesPage = () => {
           <Shape
             maxWidth="var(--shapeWidth)"
             videoSrc={shape}
-            size="calc(60vw + 20rem)"
             blendMode="lighten"
           />
         </ShapeContainer>
