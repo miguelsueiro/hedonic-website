@@ -37,7 +37,14 @@ const Shape = ({
   maxWidth,
 }) => (
   <Wrapper maxWidth={maxWidth} blendBg={blendBg}>
-    <Video src={videoSrc} autoPlay loop muted blendMode={blendMode} />
+    <Video
+      src={videoSrc}
+      playsInline
+      autoPlay
+      loop
+      muted
+      blendMode={blendMode}
+    />
   </Wrapper>
 );
 
