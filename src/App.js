@@ -65,20 +65,24 @@ const MainWrapper = styled.div`
   padding: var(--pagePadding);
 `;
 
-const Footer = () => (
-  <FooterWrapper>
-    <FooterLinksSection>
-      <Link to="/releases">releases</Link>
-      <Link to="/artists">artists</Link>
-      <Link to="/info">info</Link>
-    </FooterLinksSection>
-    <div>© Copyright Hedonic Reversal 2020.</div>
-    <div>Art direction by Miguel Sueiro.</div>
-    <div>
-      Website by <Link href="https://hayk.design">Hayk</Link>
-    </div>
-  </FooterWrapper>
-);
+const Footer = () => {
+  const year = new Date().getFullYear();
+
+  return (
+    <FooterWrapper>
+      <FooterLinksSection>
+        <Link to="/releases">releases</Link>
+        <Link to="/artists">artists</Link>
+        <Link to="/info">info</Link>
+      </FooterLinksSection>
+      <div>© Copyright Hedonic Reversal {year}.</div>
+      <div>Art direction by Miguel Sueiro.</div>
+      <div>
+        Website by <Link href="https://hayk.design">Hayk</Link>
+      </div>
+    </FooterWrapper>
+  );
+};
 
 const App = () => {
   return (
