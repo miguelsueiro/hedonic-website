@@ -36,7 +36,7 @@ const Shape = ({
   blendBg = "var(--bodyBg)",
   maxWidth,
 }) => (
-  <Wrapper maxWidth={maxWidth} blendBg={blendBg}>
+  <Wrapper maxWidth={maxWidth} blendBg={blendBg} data-name="Shape">
     <Video
       src={videoSrc}
       playsInline

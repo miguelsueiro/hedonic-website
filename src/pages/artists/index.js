@@ -36,17 +36,16 @@ const NameSection = styled.div`
 `;
 
 const ShapeContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: -9rem;
-
+  width: 100%;
+  display: grid;
+  place-items: center;
   margin: 0 auto;
   pointer-events: none;
   z-index: -1;
 
-  @media (min-width: 1000px) {
-    top: -12rem;
-    --shapeWidth: 80vw;
-  }
+  --shapeWidth: max(40vw, 700px);
 `;
 
 const ArtistsPage = () => {

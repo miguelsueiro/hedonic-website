@@ -1,7 +1,8 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import Logo from '../../components/logo'
+import { Link, NavLink } from "react-router-dom";
+
+import Logo from "../../components/logo";
+import React from "react";
+import styled from "@emotion/styled";
 
 const NavItem = styled.li`
   a {
@@ -12,7 +13,7 @@ const NavItem = styled.li`
     position: relative;
 
     &:before {
-      content: '';
+      content: "";
       width: 1.5rem;
       height: 2px;
       display: block;
@@ -39,25 +40,26 @@ const NavItem = styled.li`
       transform: scale(1, 1);
     }
   }
-`
+`;
 
 const LogoSection = styled(Link)`
   width: 200px;
 
-  @media (min-width: 1000px) {    
+  @media (min-width: 1000px) {
     width: 250px;
   }
-`
+`;
 
 const MenuWrapper = styled.ul`
   font-size: var(--text-l);
-  max-width: 90%;
-  ${p => p.menuTop && `margin-top: ${p.menuTop}`};
+  width: fit-content;
 
-  @media (max-width: 600px) {    
+  ${(p) => p.menuTop && `margin-top: ${p.menuTop}`};
+
+  @media (max-width: 600px) {
     margin-top: var(--space-l);
   }
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -67,30 +69,36 @@ const Wrapper = styled.div`
   top: var(--pagePadding);
   right: var(--pagePadding);
   z-index: 100;
-`
+`;
 
 export const Menu = ({ menuTop }) => (
   <MenuWrapper menuTop={menuTop}>
     <NavItem>
-      <NavLink activeClassName="activeMenuNav" to="/releases">releases</NavLink>
+      <NavLink activeClassName="activeMenuNav" to="/releases">
+        releases
+      </NavLink>
     </NavItem>
     <NavItem>
-      <NavLink activeClassName="activeMenuNav" to="/artists">artists</NavLink>
+      <NavLink activeClassName="activeMenuNav" to="/artists">
+        artists
+      </NavLink>
     </NavItem>
     <NavItem>
-      <NavLink activeClassName="activeMenuNav" to="/info">info</NavLink>
+      <NavLink activeClassName="activeMenuNav" to="/info">
+        info
+      </NavLink>
     </NavItem>
   </MenuWrapper>
-)
+);
 
 const Header = () => {
   return (
     <Wrapper>
       <LogoSection to="/">
-        <Logo color="var(--c-red)" width="100%"/>
+        <Logo color="var(--c-red)" width="100%" />
       </LogoSection>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
