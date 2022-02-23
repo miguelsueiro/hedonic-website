@@ -18,7 +18,7 @@ const IntroSection = styled.div`
   color: var(--releasesContent);
   margin: calc(-1 * var(--pagePadding)) calc(-1 * var(--pagePadding)) 0
     calc(-1 * var(--pagePadding));
-  height: 30vh;
+  height: 50vh;
   position: relative;
   overflow: hidden;
 
