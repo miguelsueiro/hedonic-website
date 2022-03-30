@@ -166,7 +166,7 @@ export const artistsContent = [
           'huma-hyperchaotic-00.jpg',
         ],
         coverImage: 'huma-hyperchaotic-cover.jpg',
-        listPosition: 11,
+        listPosition: 10,
       },          
     ],
   },
