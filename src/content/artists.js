@@ -165,7 +165,7 @@ export const artistsContent = [
         images: [
           'huma-emergence-00.jpg',
         ],
-        coverImage: 'huma-emergence-cover.jpg',
+        coverImage: 'huma-hyperchaotic-cover.jpg',
         listPosition: 10,
       },             
       
