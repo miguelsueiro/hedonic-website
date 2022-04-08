@@ -272,11 +272,12 @@ export const artistsContent = [
   },
   // -------------------------------------------------------  
 {
-    name: "Noir Noir",
+    name: "Noir Noir / Vesakh",
     bio: [
       "NOIR NOIR is David Vellvehi Galindo, from Mataró, near Barcelona. His sound is a mix between industrial, experimental electronics and the most disturbing dark ambient. Released by labels such as Triangulum Ignis, Fallow Field, Màgia Roja, Marbre Negre, and IIIARMS in the different stages of the project. Throughout the time, his activity has been mutating from his more intense and noisy beginnings, to more rhythmic and threatening scenarios. He shares in his songs a dreamlike and dark imaginary, with vocals and guitars that refer to a certain conceptual expressionism of Black Metal, suffocating synthesizers and modified field recordings.",
       "He has participated in different festivals (Sonar, Bicefal, Death Cult Rising, Teorema, WAV...), he has also been regularly presenting all the material he has released in live concerts in different venues and events nationwide.",
       "In the last stage he has participated in collaborative projects, along with other artists of more experimental orbit (SCMUTE) to perform live and more abrupt and artistic interventions with improvisation as the axis. In his latest solo works, he develops a more ritual and intense concept, on mystical themes and death as a transforming element.",      
+      "Vesakh is a death electronics project begotten in absolute anonymity and supreme conceptual asceticism in MMXIX in order to provide uniquely harsh and vomitive noise music as a monolithic negation of all existence.",            
     ],
     picture: "noirnoir.jpg",
     links: {
