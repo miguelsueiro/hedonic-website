@@ -46,6 +46,8 @@ const DetailsSection = styled.div`
   @media (max-width: ${breakpoint}px) {
     grid-column: 1/2;
     padding: 0 var(--space-m) 0 0;
+    left: -2px;
+    position: relative;
   }
 `
 
