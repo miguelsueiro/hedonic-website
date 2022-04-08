@@ -6,8 +6,6 @@ export const useBodyVars = () => {
   React.useEffect(() => {
     const style = document.documentElement.style
 
-    console.log(location.pathname.includes("ui-system"))
-
     const releasesPath = location.pathname.includes("/releases")
     const uiSystemPath = location.pathname.includes("ui-system")
     const isDarkPage = releasesPath || uiSystemPath

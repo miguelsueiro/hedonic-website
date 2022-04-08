@@ -7,6 +7,8 @@ import Player from '../../../ui-system/components/player';
 import Text from '../../../ui-system/components/text';
 import { getArtistPath } from '../../../utilities';
 
+const breakpoint = 1000
+
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr auto 1fr;
@@ -15,18 +17,23 @@ const Wrapper = styled.div`
 const ImagesSection = styled.div`
   margin-left: calc(-1 * var(--pagePadding));
   
-  @media (max-width: 1000px) {
+  @media (max-width: ${breakpoint}px) {
     margin-bottom: var(--space-m);
     margin-right: calc(-1 * var(--pagePadding));
     grid-column: 1/3;
     display: flex;
     overflow: auto;
+    align-items: flex-end;
+  }
+`
 
-    & > * {
+const ImageWrapper = styled.div`  
+  @media (max-width: ${breakpoint}px) {
+    ${props => props.hasMultipleImages && `
       width: 90vw;
-      flex-shrink: 0;
       margin-right: var(--space-s);
-    }
+      flex-shrink: 0;
+    `};
   }
 `
 
@@ -36,11 +43,8 @@ const DetailsSection = styled.div`
   color: var(--bodyContentDimmed);
   letter-spacing: 0.2em;
 
-  @media (max-width: 1000px) {
+  @media (max-width: ${breakpoint}px) {
     grid-column: 1/2;
-  }
-
-  @media (max-width: 1000px) {
     padding: 0 var(--space-m) 0 0;
   }
 `
@@ -50,7 +54,7 @@ const CreditsSection = styled.div`
 `
 
 const InfoSection = styled.div`
-  @media (min-width: 1001px) {
+  @media (min-width: ${breakpoint + 1}px) {
     max-width: 34rem;
   }
 `
@@ -76,6 +80,8 @@ const ReleasePage = ({
   albumId,
   buyUrl,
 }) => {
+  const hasMultipleImages = images.length > 1
+  console.log(hasMultipleImages)
   return (
     <>
       <Menu />
@@ -91,9 +97,9 @@ const ReleasePage = ({
             const imageSrc = require(`../../../content/images/releases/${image}`).default
 
             return(
-              <div key={index}>
+              <ImageWrapper key={index} hasMultipleImages={hasMultipleImages}>
                 <img src={imageSrc} alt={title}/>
-              </div>
+              </ImageWrapper>
             )
           })}
         </ImagesSection>
