@@ -137,8 +137,30 @@ export const artistsContent = [
         listPosition: 9,
       },
 
-      {
+            {
         id: 12,
+        albumId: "2904702438",
+        title: "se van sus naves",
+        catNumber: "HEDREV-00010",
+        releaseDate: "19 July 2021",
+        format: "Digital",
+        buyUrl: "https://hedonicreversal.bandcamp.com/album/se-van-sus-naves",
+        credits: [
+          "Music by Andrés Satué",
+          "Art direction and design by Miguel Sueiro",
+          "Cover Illustration Mitrilo Collective",
+          "© 2022 www.hedonicreversal.com",
+        ],
+        description: [
+          "«Se van sus naves» is an EP of experiments with different creative processes and tools such as granular synthesis or extreme sampling, created halfway between «Eva» and «Emergence».",
+          "Continuing with the exploration of the idea of singularity and exponential growth in which «Eva» was inspired, «Se van sus naves» proposes an abstract and delicate universe, closer to ambient but without leaving aside the characteristic abrasion of other albums.",
+        ],
+        images: ["huma-sevansusnaves-00.jpg"],
+        coverImage: "huma-sevansusnaves-cover.jpg",
+        listPosition: 10,
+      },
+      {
+        id: 13,
         albumId: "1241658922",
         title: "Hyperchaotic",
         catNumber: "HEDREV-00012",
@@ -158,7 +180,7 @@ export const artistsContent = [
         ],
         images: ["huma-hyperchaotic-00.jpg"],
         coverImage: "huma-hyperchaotic-cover.jpg",
-        listPosition: 10,
+        listPosition: 11,
       },
     ],
   },
