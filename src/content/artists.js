@@ -295,7 +295,7 @@ export const artistsContent = [
           "Tundra takes by inspiration the northern hemisphere. It starts from the southern area of that hemisphere to the Northern area of the whole globe, where all the nature mutates by the clime and changes slowly its form. It’s about a life path where our humanity starts blurring with what the earthly world is made from devoured by organic sounds that take on a variety contrasted by the natural and the artificial.",
         ],
         images: [
-          "refectori-tundra-01.jpg",
+          "refectori-tundra-00.jpg",
         ],
         coverImage: "refectori-tundra-cover.jpg",
         listPosition: 12,
