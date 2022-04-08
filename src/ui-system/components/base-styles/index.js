@@ -93,11 +93,7 @@ const styles = css`
 const BaseStyles = () => {
   useBodyVars();
 
-  return(
-    <Global
-      styles={styles}
-    />
-  )
+  return <Global styles={styles} />
 }
 
 export default BaseStyles
