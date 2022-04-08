@@ -274,6 +274,32 @@ export const artistsContent = [
         coverImage: "refectori-espleni-cover.jpg",
         listPosition: 4,
       },
+  {
+        id: 14,
+        albumId: "731044038",
+        title: "Tundra",
+        catNumber: "HEDREV-00008",
+        releaseDate: "28 January 2021",
+        format: "Cassette / Digital",
+        buyUrl: "https://hedonicreversal.bandcamp.com/album/tundra",
+        credits: [
+          "Written and produced by Xavier Longàs",
+          "Mastered by Pedro Pina",
+          "Art direction & Design Miguel Sueiro",
+          "Photography by Júlia Aguilar",
+          "© 2021 www.hedonicreversal.com",
+        ],
+        description: [
+          "Refectori is the project of the young catalan Xavier Longàs. Based on the experimental sound, that highlight physical and voluminous forms that roam glacial landscapes. Diving through dense and icy seas, it slowly emerges into light, encountering the earthly world between reverberated voices and nostalgic melodies.",
+          "He has performed in different concert halls and festivals held in Barcelona such as MIRA Festival, in the two editions of Bicefal Festival, as well as bringing sounds close to techno at the Kreuzberg Club by the hand of Diffuse Reality. Also with the HEX collective, he has participated in his second episode in Razzmatazz's The Loft.",
+          "Tundra takes by inspiration the northern hemisphere. It starts from the southern area of that hemisphere to the Northern area of the whole globe, where all the nature mutates by the clime and changes slowly its form. It’s about a life path where our humanity starts blurring with what the earthly world is made from devoured by organic sounds that take on a variety contrasted by the natural and the artificial.",
+        ],
+        images: [
+          "refectori-tundra-01.jpg",
+        ],
+        coverImage: "refectori-tundra-cover.jpg",
+        listPosition: 12,
+      },      
     ],
   },
   // --------------------------------------------------------
