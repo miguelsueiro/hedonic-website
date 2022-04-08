@@ -1,7 +1,7 @@
 export const latestReleaseContent = {
   id: 1,
-  image: '0022784123_10.jpg',
+  image: 'hyperchaotic-new-release.jpg',
   description: [
-    'Refectori is the project of the young catalan Xavier Longàs. Based on the experimental sound, that highlight physical and voluminous forms that roam glacial landscapes. Diving through dense and icy seas, it slowly emerges into light, encountering the earthly world between reverberated voices and nostalgic melodies.',
+    'Huma «Hyperchaotic» explores chaos, theoretical physics, uncertainties and how order emerges out of the fog of the real. No apparent or understandable reason is required for this or anything else to simply, be.',
   ],
 }
