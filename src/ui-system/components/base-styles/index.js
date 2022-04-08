@@ -14,6 +14,7 @@ const styles = css`
     --releasesContent: white;
     --releasesContentDimmed: hsla(203, 34%, 83%, 70%);  
 
+    --text-m: clamp(1rem, 1vw, 1.2rem);
     --text-l: clamp(1.5rem, 2.1vw, 1.8rem);
     --text-xl: clamp(2rem, 4.5vw, 3rem);
     --text-2xl: clamp(3rem, 6vw, 5rem);
@@ -27,11 +28,10 @@ const styles = css`
 
     --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
 
-    --space-s: 0.5rem;
-    --space-m: 1.5rem;
-    --space-l: 3rem;
-    --space-xl: 6rem;
-    --space-2xl: 8rem;
+    --space-s: calc(0.4rem + 0.3vw);
+    --space-m: calc(var(--space-s) * 3);
+    --space-l: calc(var(--space-m) * 2);
+    --space-xl: calc(var(--space-l) * 2);
     
     --pagePadding: var(--space-m);
   }
@@ -50,6 +50,7 @@ const styles = css`
     color: var(--bodyContent);
     transition: background 0.3s;
     margin: 0;
+    font-size: var(--text-m);
     font-family: "QuioscoOne", -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
