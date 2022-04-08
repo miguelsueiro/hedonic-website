@@ -145,7 +145,7 @@ export const artistsContent = [
       },           
   {
         id: 11,
-        albumId: '1485023715',
+        albumId: '1485023725',
         title: 'Hyperchaotic',
         catNumber: 'HEDREV-00012',
         releaseDate: '01 April 2022',
