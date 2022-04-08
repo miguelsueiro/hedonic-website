@@ -144,6 +144,32 @@ export const artistsContent = [
         listPosition: 9,
       },           
       
+      {
+        id: 12,
+        albumId: '1673264445',
+        title: 'Hyperchaotic',
+        catNumber: 'HEDREV-00012',
+        releaseDate: '01 April 2022',
+        format: 'Cassette / Digital',
+        buyUrl: 'https://hedonicreversal.bandcamp.com/album/hyperchaotic',
+        credits: [
+          'Written, produced and mastered by Andrés Satué',
+          'Art direction and design by Miguel Sueiro',
+          'Cover illustration by Jos Leys',          
+          '© 2022 www.hedonicreversal.com',             
+        ],
+        description: [
+          'Huma «Hyperchaotic» explores chaos, theoretical physics, uncertainties and how order emerges out of the fog of the real. No apparent or understandable reason is required for this or anything else to simply, be.',
+          'The album seeks balance between randomness and certainty, between abrasion and delicacy. Sound design references elemental processes that seem to take on a life of their own: combining, interfacing and modulating each other. Sound, space and silence creating symbiosis and an incredibly detailed listening experience which evokes the kinesthetics of Gábor Lázár or the cybernetic wild cards of Terminal 11.'.
+          'The album is released at Opal Tapes in collaboration with Hedonic Reversal - hedonicreversal.bandcamp.com - Where cassette tape versions of this release can be found.',
+        ],
+        images: [
+          'huma-hyperchaotic-00.jpg',
+        ],
+        coverImage: 'huma-hyperchaotic-cover.jpg',
+        listPosition: 10,
+      },         
+      
     ],
   },
   // --------------------------------------------------------
