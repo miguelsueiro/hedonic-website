@@ -50,7 +50,7 @@ const InfoPage = () => {
         <div>
           <Text size="l">Listen</Text>
           <p>
-            <Link href="https://www.google.com">Bandcamp</Link>
+            <Link href="https://hedonicreversal.bandcamp.com">Bandcamp</Link>
             <br />
             <Link href="https://www.google.com">Apple Music</Link>
             <br />
@@ -60,11 +60,11 @@ const InfoPage = () => {
         <div>
           <Text size="l">Follow</Text>
           <p>
-            <Link href="https://www.google.com">Instagram</Link>
+            <Link href="https://www.instagram.com/hedonic_reversal/">Instagram</Link>
             <br />
-            <Link href="https://www.google.com">Facebook</Link>
+            <Link href="https://www.facebook.com/hedonicreversal/">Facebook</Link>
             <br />
-            <Link href="https://www.google.com">Soundcloud</Link>
+            <Link href="https://soundcloud.com/hedonic_reversal">Soundcloud</Link>
           </p>
         </div>
         <div>
