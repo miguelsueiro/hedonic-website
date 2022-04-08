@@ -1,3 +1,3 @@
 export const latestNewsContent = `
-  Dublab Hedonic Reversal 030 New Hedonic Reversal radio show in Dublab BCN. On air next wednesday 21st december at 4:00 PM. Tune in from here.
+ Latest dublab Hedonic Reversal show now online on dublab.es. Expect music from Ash Koosha, Nadja, Author & Punisher and many more!
 `
