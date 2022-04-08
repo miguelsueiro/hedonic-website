@@ -271,6 +271,46 @@ export const artistsContent = [
     ],
   },
   // -------------------------------------------------------  
+{
+    name: "Noir Noir",
+    bio: [
+      "NOIR NOIR is David Vellvehi Galindo, from Mataró, near Barcelona. His sound is a mix between industrial, experimental electronics and the most disturbing dark ambient. Released by labels such as Triangulum Ignis, Fallow Field, Màgia Roja, Marbre Negre, and IIIARMS in the different stages of the project. Throughout the time, his activity has been mutating from his more intense and noisy beginnings, to more rhythmic and threatening scenarios. He shares in his songs a dreamlike and dark imaginary, with vocals and guitars that refer to a certain conceptual expressionism of Black Metal, suffocating synthesizers and modified field recordings.",
+      "He has participated in different festivals (Sonar, Bicefal, Death Cult Rising, Teorema, WAV...), he has also been regularly presenting all the material he has released in live concerts in different venues and events nationwide.",
+      "In the last stage he has participated in collaborative projects, along with other artists of more experimental orbit (SCMUTE) to perform live and more abrupt and artistic interventions with improvisation as the axis. In his latest solo works, he develops a more ritual and intense concept, on mystical themes and death as a transforming element.",      
+    ],
+    picture: "noirnoir.jpg",
+    links: {
+      bandcamp: "https://noir-noir.bandcamp.com",
+      instagram: "https://www.instagram.com/treblenoir/",
+    },
+    releases: [
+      {
+        id: 14,
+        albumId: "3412546295",
+        title: "Divine Swelling",
+        catNumber: "HEDREV-00011",
+        releaseDate: "10 March 2022",
+        format: "Cassette / Digital",
+        buyUrl: "https://hedonicreversal.bandcamp.com/album/divine-swelling",
+        credits: [
+          "Written and produced by David Vellvehi &Vesakh",
+          "Cover illustration by David Vellvehi",
+          "Artwork by Miguel Sueiro",
+          "© 2022 www.hedonicreversal.com",
+        ],
+        description: [
+          "In poisonous alliance we proudly present Noir Noir and Vesakh new split release. Ten cuts of extreme electronics ritual offence.",
+          "On the one hand, Vesakh provides four tracks of grotesque and ill-formed death electronics extravagance. On the other hand, Noir Noir returns again with six unusually aphotic and detrimental songs following the path of the vulture. Only for the power electronics and death industrial devotee.",
+        ],
+        images: [
+          "noirnoir-divineswelling-00.jpg",
+        ],
+        coverImage: "noirnoir-divineswelling.jpg",
+        listPosition: 13,
+      },
+    ],
+  },
+  // -------------------------------------------------------    
  {
     name: "Orphan Swords",
     bio: [
