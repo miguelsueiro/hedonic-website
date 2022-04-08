@@ -87,8 +87,6 @@ export const artistsContent = [
         images: [
           "huma-eva-01.jpg",
           "huma-eva-02.jpg",
-          "huma-eva-03.jpg",
-          "huma-eva-04.jpg",
         ],
         coverImage: "huma-eva-cover.jpg",
         listPosition: 6,
