@@ -5,8 +5,14 @@ export const useBodyVars = () => {
   let location = useLocation();
   React.useEffect(() => {
     const style = document.documentElement.style
+
+    console.log(location.pathname.includes("ui-system"))
+
+    const releasesPath = location.pathname.includes("/releases")
+    const uiSystemPath = location.pathname.includes("ui-system")
+    const isDarkPage = releasesPath || uiSystemPath
     
-    if(location.pathname.includes("/releases")) {
+    if(isDarkPage) {
       style.setProperty('--bodyBg', 'var(--releasesBg)');
       style.setProperty('--bodyContent', 'var(--releasesContent)');
       style.setProperty('--bodyContentDimmed', 'var(--releasesContentDimmed)');
