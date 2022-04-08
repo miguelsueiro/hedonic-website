@@ -54,7 +54,7 @@ const InfoPage = () => {
             <br />
             <Link href="https://www.google.com">Apple Music</Link>
             <br />
-            <Link href="https://www.google.com">Spotify</Link>
+            <Link href="https://open.spotify.com/search/label%3A%20%22hedonic%20reversal%22">Spotify</Link>
           </p>
         </div>
         <div>
