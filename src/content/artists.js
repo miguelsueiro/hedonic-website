@@ -1,5 +1,52 @@
 export const artistsContent = [
   {
+    name: "Blume Attempt",
+    bio: [
+      "Blume Attempt is the artistic name of the Spanish artist based in Leipzig (Germany) Javier Vivancos.",
+      "In his second EP «Just like you», Blume Attempt creates a sound of its own where modern electronic experimental music interweaves with strong influences of industrial music from the late 80s.",
+      "After a first digital release on Banned In Vegas record label («Perpetual», 2016), Javier Vivancos does a retrospective exercise and projects more aggressive and repetitive sounds and textures in his compositions, passed through his personal filter, leading him to create four new cuts that suppose his first recordings for Hedonic Reversal.",
+    ],
+    picture: "blume.jpg",
+    links: {
+      facebook: "https://www.facebook.com/blumeattempt",
+      soundcloud: "https://soundcloud.com/blumeattempt",
+      instagram: "https://soundcloud.com/blumeattempt",
+    },
+    releases: [
+      {
+        id: 6,
+        albumId: "2436117798",
+        title: "Just Like You",
+        catNumber: "HEDREV-00003",
+        releaseDate: "23 May 2018",
+        format: "Vinyl / Digital",
+        buyUrl: "https://hedonicreversal.bandcamp.com/album/just-like-you",
+        credits: [
+          "Written and produced by Blume Attempt",
+          "Sax in «Seed» by Hans Betancourth",
+          "Mastered by Pedro Viñuela",
+          "Art direction and design by Miguel Sueiro",
+          "Photography by Sophie Valentin",
+        ],
+        description: [
+          "In his second EP «Just like you», Blume Attempt creates a sound of its own where modern electronic experimental music interweaves with strong influences of the late 80’s industrial music.",
+          'After a first digital release on Banned in Vegas record label ("Perpetual", 2016), Javier Vivancos does a retrospective exercise and projects more aggressive and repetitive sounds and textures in his compositions passed through his personal filter, leading him to create four new cuts that involve his first recordings for Hedonic Reversal.',
+        ],
+        images: [
+          "blumeattempt-justlikeyou-01.jpg",
+          "blumeattempt-justlikeyou-02.jpg",
+          "blumeattempt-justlikeyou-03.jpg",
+          "blumeattempt-justlikeyou-04.jpg",
+          "blumeattempt-justlikeyou-05.jpg",
+          "blumeattempt-justlikeyou-06.jpg",
+        ],
+        coverImage: "blumeattempt-justlikeyou-cover.jpg",
+        listPosition: 2,
+      },
+    ],
+  },
+  // ---------------------------------------------------------
+ {
     name: "Huma",
     bio: [
       "Huma is the personal project of Andrés Satué. Born in Galicia but based in Barcelona, he has an extensive career in musical experimentation, from his first math-kraut-rock and prog bands, to experimental electronics with his previous project Esquelas and now with Huma. He has released several albums under labels including Bestiarie, ENSMBLE and Matapadre. He participated in the Red Bull Music Academy Bass Camp in Madrid, played at some of the most relevant Spanish experimental electronics festivals and is co-founder of Hedonic Reversal label and Bicefal Festival. He also runs a monthly radio show with his label partner Miguel Sueiro at Dublab Barcelona.",
@@ -184,54 +231,93 @@ export const artistsContent = [
       },
     ],
   },
-  // --------------------------------------------------------
+  // -------------------------------------------------------
   {
-    name: "Blume Attempt",
+    name: "IOM",
     bio: [
-      "Blume Attempt is the artistic name of the Spanish artist based in Leipzig (Germany) Javier Vivancos.",
-      "In his second EP «Just like you», Blume Attempt creates a sound of its own where modern electronic experimental music interweaves with strong influences of industrial music from the late 80s.",
-      "After a first digital release on Banned In Vegas record label («Perpetual», 2016), Javier Vivancos does a retrospective exercise and projects more aggressive and repetitive sounds and textures in his compositions, passed through his personal filter, leading him to create four new cuts that suppose his first recordings for Hedonic Reversal.",
+      "Iker Ormazabal was born in Vitoria and lives in London. He started his solo project IOM circa 2004. He has also been a member of bands like Atomoog, Sorkun, FFT Players, Soizu, Oilbag Mnemoniic o Warren Schoenbright and has published music in labels such as: Zulo Beltzak, RONF, Doministiku, Desetxea, Afeite Al Perro, Astral Noize, Attenuation Circuit, Mattoid and Hominid Sounds.",
+      'He has previously worked alongside other artists such as Arturo Blasco, Jordi Aligué, Borja Ramos, Miguel A García, Raxil4, Itto Morita, Minako Seki, Gonzalo Catalinas among others. In 2017, he was awarded with the John Leckie Award for Innovation in Audio Production for a soundtrack to "Elementary Tryptych of Spain" by Jose Val del Omar. He also runs his own effects-pedal brand, IOHM Fx.',
     ],
-    picture: "blume.jpg",
+    picture: "iom.jpg",
     links: {
-      facebook: "https://www.facebook.com/blumeattempt",
-      soundcloud: "https://soundcloud.com/blumeattempt",
-      instagram: "https://soundcloud.com/blumeattempt",
+      bandcamp: "https://ikerormazabal.bandcamp.com",
     },
     releases: [
       {
-        id: 6,
-        albumId: "2436117798",
-        title: "Just Like You",
-        catNumber: "HEDREV-00003",
-        releaseDate: "23 May 2018",
-        format: "Vinyl / Digital",
-        buyUrl: "https://hedonicreversal.bandcamp.com/album/just-like-you",
+        id: 10,
+        albumId: "2695128972",
+        title:
+          "Izkuturik ziren hitzak eztabaiden artean aurkitu ditut, baino soinurik ez dute egiten",
+        catNumber: "HEDREV-00007",
+        releaseDate: "10 December 2020",
+        format: "Cassette / Digital",
+        buyUrl:
+          "https://hedonicreversal.bandcamp.com/album/izkuturik-ziren-hitzak-eztabaiden-artean-aurkitu-ditut-baino-soinurik-ez-dute-egiten",
         credits: [
-          "Written and produced by Blume Attempt",
-          "Sax in «Seed» by Hans Betancourth",
-          "Mastered by Pedro Viñuela",
-          "Art direction and design by Miguel Sueiro",
-          "Photography by Sophie Valentin",
+          "Iker Ormazabal: Arturia Mini Brute, Sherman Filterbank, Elektron Octatrack, Trogotronic 669 and several pedals from IOhM Fx.",
+          "Recorded in Ableton Live and mixed in Pro Tools.",
+          "Miguel Sueiro: Art direction & design.",
+          "Teresa Espadafor: Photography.",
+          "© 2020 www.hedonicreversal.com",
         ],
         description: [
-          "In his second EP «Just like you», Blume Attempt creates a sound of its own where modern electronic experimental music interweaves with strong influences of the late 80’s industrial music.",
-          'After a first digital release on Banned in Vegas record label ("Perpetual", 2016), Javier Vivancos does a retrospective exercise and projects more aggressive and repetitive sounds and textures in his compositions passed through his personal filter, leading him to create four new cuts that involve his first recordings for Hedonic Reversal.',
+          "Time is the main subject matter in IOMs music. Kronos and Kairos are the two greek words which describe its different facets. Kronos refers to the chronological character and its human perception, while the latter refers to the propitious moment and the permanent condition of time. My main interest, is the intersection between these two characteristics in the present moment.",
+          "In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the albums brief moments.",
         ],
-        images: [
-          "blumeattempt-justlikeyou-01.jpg",
-          "blumeattempt-justlikeyou-02.jpg",
-          "blumeattempt-justlikeyou-03.jpg",
-          "blumeattempt-justlikeyou-04.jpg",
-          "blumeattempt-justlikeyou-05.jpg",
-          "blumeattempt-justlikeyou-06.jpg",
-        ],
-        coverImage: "blumeattempt-justlikeyou-cover.jpg",
-        listPosition: 2,
+        images: ["iom-izkuturik-00.jpg"],
+        coverImage: "iom-izkuturik-cover.jpg",
+        listPosition: 8,
       },
     ],
   },
-  // ---------------------------------------------------------
+  // -------------------------------------------------------  
+ {
+    name: "Orphan Swords",
+    bio: [
+      "Brussels based duo Orphan Swords have made a name for themselves, specialising in formal radicalism and brutal-yet-danceable live performances. Yet, defining their project and vision for several years, Pierre de Mûelenaere (Maze & Lindholm) and Yannick Franck (RAUM, Mt Gemini, Figure Section) have, in this, explored a multitude of sounds and styles, delivering heavy industrial pulses, dark trance, post-wave, throbbing live rave techno and deep introspective soundscapes. Their music has been released on a.o., Aurora Borealis, Desire Records and Clan Destine Records.",
+      "Ever refined yet never for the faint hearted, their music is at once conceptually rigorous and powerfully presented. As well as numerous projects, releases and aesthetic directions, the duo have  also developed several multimedia collaborations, including a performance for the notorious Antwerp designer Walter Van Beirendonck and his 2018 show at Paris Fashion Week. ‘A collection that was both eye-opening and ear stimulating, thanks to the mutedly nosebleed soundtrack delivered by Orphan Swords’ said Vogue.",
+    ],
+    picture: "orphan-swords.jpg",
+    links: {
+      facebook: "https://www.facebook.com/OrphanSwords/",
+      soundcloud: "https://soundcloud.com/orphanswords",
+      instagram: "https://www.instagram.com/orphanswords/",
+    },
+    releases: [
+      {
+        id: 9,
+        albumId: "2966684029",
+        title: "Ascent",
+        catNumber: "HEDREV-00005",
+        releaseDate: "21 June 2019",
+        format: "Vinyl / Digital",
+        buyUrl: "https://hedonicreversal.bandcamp.com/album/ascent",
+        credits: [
+          "Music by Orphan Swords ",
+          "Mastered by Pedro Pina",
+          "Artwork and design by Miguel Sueiro",
+          "© 2019 www.hedonicreversal.com",
+        ],
+        description: [
+          "After several acclaimed EPs, including Risk in a New Age(Desire Records 2014), License To Desire (Desire Records 2015, reissued by Aurora Borealis recordings in 2017) andWeehawken (Clan Destine Records 2016) - Orphan Swords’ debut LP, Ascent, finally arrives. In recording the album, the duo took the radical decision to interchange their usual respective input in the creative process, which resulted in a revelatory piece of music, one that functions as an initiatory narrative summarized as follows:",
+          "Ascent is the story of an enigma vanishing into a mountain, somewhere undefined. You left your home long ago but still you endeavor to solve this mystery. At last, today you reach the highest town in the mountains, the ultimate refuge before the loftiest peak. You prepare yourself for the culmination of your search, the ascent. As you climb, the path gets steeper and steeper, the air thinner and thinner. Exhausted and out of breath, you push on. Surrounded by clouds and ice-cold stone, through the haze of your confusion, you’re struck by the thought that the object of your obsession, the missing entity you’re driven to find, is a part of you. It was lost long ago along with every memory you had of its form and shape. Nevertheless you know for sure it’s what you seek. ",
+          "Ascent is the story of that search for inner unity, through transience, emptiness, and finally, acceptance. Through profound introspection we ascend.",
+          "Ascent is the first part of a diptych. Breach - also recorded during the same period - will follow and conclude the two-part conceptual series at a later date.",
+        ],
+        images: [
+          "orphanswords-ascent-01.jpg",
+          "orphanswords-ascent-02.jpg",
+          "orphanswords-ascent-03.jpg",
+          "orphanswords-ascent-04.jpg",
+          "orphanswords-ascent-05.jpg",
+          "orphanswords-ascent-06.jpg",
+        ],
+        coverImage: "orphanswords-ascent-cover.jpg",
+        listPosition: 5,
+      },
+    ],
+  },
+  // -------------------------------------------------------  
   {
     name: "Refectori",
     bio: [
@@ -303,90 +389,5 @@ export const artistsContent = [
     ],
   },
   // --------------------------------------------------------
-  {
-    name: "Orphan Swords",
-    bio: [
-      "Brussels based duo Orphan Swords have made a name for themselves, specialising in formal radicalism and brutal-yet-danceable live performances. Yet, defining their project and vision for several years, Pierre de Mûelenaere (Maze & Lindholm) and Yannick Franck (RAUM, Mt Gemini, Figure Section) have, in this, explored a multitude of sounds and styles, delivering heavy industrial pulses, dark trance, post-wave, throbbing live rave techno and deep introspective soundscapes. Their music has been released on a.o., Aurora Borealis, Desire Records and Clan Destine Records.",
-      "Ever refined yet never for the faint hearted, their music is at once conceptually rigorous and powerfully presented. As well as numerous projects, releases and aesthetic directions, the duo have  also developed several multimedia collaborations, including a performance for the notorious Antwerp designer Walter Van Beirendonck and his 2018 show at Paris Fashion Week. ‘A collection that was both eye-opening and ear stimulating, thanks to the mutedly nosebleed soundtrack delivered by Orphan Swords’ said Vogue.",
-    ],
-    picture: "orphan-swords.jpg",
-    links: {
-      facebook: "https://www.facebook.com/OrphanSwords/",
-      soundcloud: "https://soundcloud.com/orphanswords",
-      instagram: "https://www.instagram.com/orphanswords/",
-    },
-    releases: [
-      {
-        id: 9,
-        albumId: "2966684029",
-        title: "Ascent",
-        catNumber: "HEDREV-00005",
-        releaseDate: "21 June 2019",
-        format: "Vinyl / Digital",
-        buyUrl: "https://hedonicreversal.bandcamp.com/album/ascent",
-        credits: [
-          "Music by Orphan Swords ",
-          "Mastered by Pedro Pina",
-          "Artwork and design by Miguel Sueiro",
-          "© 2019 www.hedonicreversal.com",
-        ],
-        description: [
-          "After several acclaimed EPs, including Risk in a New Age(Desire Records 2014), License To Desire (Desire Records 2015, reissued by Aurora Borealis recordings in 2017) andWeehawken (Clan Destine Records 2016) - Orphan Swords’ debut LP, Ascent, finally arrives. In recording the album, the duo took the radical decision to interchange their usual respective input in the creative process, which resulted in a revelatory piece of music, one that functions as an initiatory narrative summarized as follows:",
-          "Ascent is the story of an enigma vanishing into a mountain, somewhere undefined. You left your home long ago but still you endeavor to solve this mystery. At last, today you reach the highest town in the mountains, the ultimate refuge before the loftiest peak. You prepare yourself for the culmination of your search, the ascent. As you climb, the path gets steeper and steeper, the air thinner and thinner. Exhausted and out of breath, you push on. Surrounded by clouds and ice-cold stone, through the haze of your confusion, you’re struck by the thought that the object of your obsession, the missing entity you’re driven to find, is a part of you. It was lost long ago along with every memory you had of its form and shape. Nevertheless you know for sure it’s what you seek. ",
-          "Ascent is the story of that search for inner unity, through transience, emptiness, and finally, acceptance. Through profound introspection we ascend.",
-          "Ascent is the first part of a diptych. Breach - also recorded during the same period - will follow and conclude the two-part conceptual series at a later date.",
-        ],
-        images: [
-          "orphanswords-ascent-01.jpg",
-          "orphanswords-ascent-02.jpg",
-          "orphanswords-ascent-03.jpg",
-          "orphanswords-ascent-04.jpg",
-          "orphanswords-ascent-05.jpg",
-          "orphanswords-ascent-06.jpg",
-        ],
-        coverImage: "orphanswords-ascent-cover.jpg",
-        listPosition: 5,
-      },
-    ],
-  },
-  // -------------------------------------------------------
-  {
-    name: "IOM",
-    bio: [
-      "Iker Ormazabal was born in Vitoria and lives in London. He started his solo project IOM circa 2004. He has also been a member of bands like Atomoog, Sorkun, FFT Players, Soizu, Oilbag Mnemoniic o Warren Schoenbright and has published music in labels such as: Zulo Beltzak, RONF, Doministiku, Desetxea, Afeite Al Perro, Astral Noize, Attenuation Circuit, Mattoid and Hominid Sounds.",
-      'He has previously worked alongside other artists such as Arturo Blasco, Jordi Aligué, Borja Ramos, Miguel A García, Raxil4, Itto Morita, Minako Seki, Gonzalo Catalinas among others. In 2017, he was awarded with the John Leckie Award for Innovation in Audio Production for a soundtrack to "Elementary Tryptych of Spain" by Jose Val del Omar. He also runs his own effects-pedal brand, IOHM Fx.',
-    ],
-    picture: "iom.jpg",
-    links: {
-      bandcamp: "https://ikerormazabal.bandcamp.com",
-    },
-    releases: [
-      {
-        id: 10,
-        albumId: "2695128972",
-        title:
-          "Izkuturik ziren hitzak eztabaiden artean aurkitu ditut, baino soinurik ez dute egiten",
-        catNumber: "HEDREV-00007",
-        releaseDate: "10 December 2020",
-        format: "Cassette / Digital",
-        buyUrl:
-          "https://hedonicreversal.bandcamp.com/album/izkuturik-ziren-hitzak-eztabaiden-artean-aurkitu-ditut-baino-soinurik-ez-dute-egiten",
-        credits: [
-          "Iker Ormazabal: Arturia Mini Brute, Sherman Filterbank, Elektron Octatrack, Trogotronic 669 and several pedals from IOhM Fx.",
-          "Recorded in Ableton Live and mixed in Pro Tools.",
-          "Miguel Sueiro: Art direction & design.",
-          "Teresa Espadafor: Photography.",
-          "© 2020 www.hedonicreversal.com",
-        ],
-        description: [
-          "Time is the main subject matter in IOMs music. Kronos and Kairos are the two greek words which describe its different facets. Kronos refers to the chronological character and its human perception, while the latter refers to the propitious moment and the permanent condition of time. My main interest, is the intersection between these two characteristics in the present moment.",
-          "In this album, specifically, there is a fundamental structure in each song, which was recorded in one take and represents the sequential aspect. The rest of the tracks building-blocks are based on studio processes and a posteriori decisions, which in turn represent the vertical quality of time and the present moment in each of the albums brief moments.",
-        ],
-        images: ["iom-izkuturik-00.jpg"],
-        coverImage: "iom-izkuturik-cover.jpg",
-        listPosition: 8,
-      },
-    ],
-  },
-  // -------------------------------------------------------
+
 ];
