@@ -305,7 +305,7 @@ export const artistsContent = [
         images: [
           "noirnoir-divineswelling-00.jpg",
         ],
-        coverImage: "noirnoir-divineswelling.jpg",
+        coverImage: "noirnoir-divineswelling-cover.jpg",
         listPosition: 13,
       },
     ],
