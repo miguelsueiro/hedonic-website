@@ -155,9 +155,8 @@ const HomePage = () => {
             latest news
           </Text>
           <div>
-            <Text size="l" maxWidth="40ch">
-              {latestNewsContent}
-            </Text>
+            <Text size="l" maxWidth="40ch" dangerouslySetInnerHTML={{__html: latestNewsContent}}/>
+            
             <Spacer t="m">
               <Text>subscribe to Hedonic Reversal newsletter</Text>
               <NewsletterForm />

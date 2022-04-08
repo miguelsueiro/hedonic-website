@@ -58,6 +58,10 @@ const styles = css`
   a {
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+      color: var(--c-red);
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
